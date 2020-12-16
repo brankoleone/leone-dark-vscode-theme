@@ -3,7 +3,7 @@ VSCode Color Theme based on [One Dark Pro](https://marketplace.visualstudio.com/
 
 ## This is how it looks like in an angular component (.ts):
 
-![Angular Snapshot](images/code-angular.png)
+![Angular Snapshot](https://raw.githubusercontent.com/brankoleone/leone-dark-vscode-theme/main/images/code-angular.png)
 
 ## This is the look for React app:
 
