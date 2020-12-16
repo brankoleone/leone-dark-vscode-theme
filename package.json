@@ -1,21 +1,43 @@
 {
-    "name": "leone-dark",
-    "displayName": "LeOne Dark",
-    "description": "Leone Dark Color Theme based on One Dark Pro",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.51.0"
-    },
-    "categories": [
-        "Themes"
-    ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "LeOne Dark",
-                "uiTheme": "vs-dark",
-                "path": "./themes/LeOne Dark-color-theme.json"
-            }
-        ]
-    }
+	"name": "leone-dark",
+	"displayName": "LeOne Dark",
+	"description": "Leone Dark Color Theme based on One Dark Pro",
+	"version": "0.0.1",
+	"homepage": "https://github.com/brankoleone/leone-dark-vscode-theme.git",
+	"repository": {
+		"url": "https://github.com/brankoleone/leone-dark-vscode-theme.git",
+		"type": "git"
+	},
+	"publisher": "brankoleone",
+	"engines": {
+		"vscode": "^1.51.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"One Dark",
+		"Dark Theme",
+		"Leone",
+		"Leone Dark"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "LeOne Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/LeOne Dark-color-theme.json"
+			}
+		]
+	},
+	"scripts": {
+		"publish": "vsce publish patch",
+		"publish:minor": "vsce publish minor",
+		"publish:major": "vsce publish major"
+	},
+	"__metadata": {
+		"id": "cc37a445-bbc5-435c-b406-8851b4e280a8",
+		"publisherDisplayName": "brankoleone",
+		"publisherId": "a7e31eb0-3cfd-404d-a2db-67979587e1a2"
+	}
 }
