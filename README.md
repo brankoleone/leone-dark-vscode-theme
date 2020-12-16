@@ -7,8 +7,8 @@ VSCode Color Theme based on [One Dark Pro](https://marketplace.visualstudio.com/
 
 ## This is the look for React app:
 
-![React Snapshot](images/code-react.png)
+![React Snapshot](https://raw.githubusercontent.com/brankoleone/leone-dark-vscode-theme/main/images/code-react.png)
 
 ## In CSS and SCSS it goes like this:
 
-![CSS/SCSS Snapshot](images/code-scss.png)
+![CSS/SCSS Snapshot](https://raw.githubusercontent.com/brankoleone/leone-dark-vscode-theme/main/images/code-scss.png)
