@@ -15,19 +15,27 @@
     "diffEditor.insertedTextBackground": "#00809b33",
     "dropdown.background": "#21252b",
     "dropdown.border": "#21252b",
-    "editor.background": "#22272F",
-    "editor.findMatchBackground": "#42557b",
-    "editor.findMatchBorder": "#457dff",
-    "editor.findMatchHighlightBackground": "#6199ff2f",
+
+    "editor.background": "#20252F",
     "editor.foreground": "#abb2bf",
-    "editor.lineHighlightBackground": "#2c313c",
+
     "editor.selectionBackground": "#67769660",
-    "editor.selectionHighlightBackground": "#111",
-    "editor.selectionHighlightBorder": "#555",
-    "editor.wordHighlightBackground": "#111",
-    "editor.wordHighlightBorder": "#555",
-    "editor.wordHighlightStrongBackground": "#111",
-    "editor.wordHighlightStrongBorder": "#555",
+    "editor.selectionForeground": "#ff0000",
+
+    "editor.selectionHighlightBorder": "#515a6b",
+    "editor.selectionHighlightBackground": "#2c313c",
+
+    "editor.wordHighlightBackground": "#00000000",
+    "editor.wordHighlightBorder": "#515a6b",
+    "editor.wordHighlightStrongBackground": "#00000000",
+    "editor.wordHighlightStrongBorder": "#738097",
+
+    "editor.lineHighlightBackground": "#2c313c",
+
+    "editor.findMatchBackground": "#111",
+    "editor.findMatchBorder": "#515a6b",
+    "editor.findMatchHighlightBorder": "#515a6b",
+
     "editorBracketMatch.background": "#515a6b",
     "editorBracketMatch.border": "#515a6b",
     "editorCursor.background": "#ffffffc9",
@@ -55,8 +63,10 @@
     "list.activeSelectionBackground": "#2C313B",
     "list.activeSelectionForeground": "#d7dae0",
     "list.focusBackground": "#383e4a",
+    "list.focusForeground": "#cacaca",
     "list.highlightForeground": "#c5c5c5",
     "list.hoverBackground": "#292d37",
+    "list.hoverForeground": "#cacaca",
     "list.inactiveSelectionBackground": "#2c313a",
     "list.inactiveSelectionForeground": "#d7dae0",
     "list.warningForeground": "#d19a66",
@@ -68,13 +78,15 @@
     "scrollbarSlider.activeBackground": "#747d9180",
     "scrollbarSlider.background": "#4e566660",
     "scrollbarSlider.hoverBackground": "#5a637580",
-    "sideBar.background": "#20252F",
+    "sideBar.background": "#1c202b",
+    "sideBar.foreground": "#acacac",
     "sideBar.border": "#2a2f38",
+    "gitDecoration.ignoredResourceForeground": "#5c5c5c",
     "sideBarSectionHeader.background": "#272B34",
-    "statusBar.background": "#373e49",
-    "statusBar.debuggingBackground": "#cc6633",
-    "statusBar.debuggingBorder": "#66017a",
-    "statusBar.debuggingForeground": "#ffffff",
+    "statusBar.background": "#335481",
+    "statusBar.debuggingBackground": "#50AF8E",
+    "statusBar.debuggingForeground": "#000000",
+    "statusBar.debuggingBorder": "#32746d",
     "statusBar.foreground": "#e7e7e7",
     "statusBar.noFolderBackground": "#21252b",
     "statusBarItem.hoverBackground": "#2c313a",
@@ -102,7 +114,7 @@
     "terminal.ansiRed": "#e05561",
     "terminal.ansiWhite": "#e6e6e6",
     "terminal.ansiYellow": "#d18f52",
-    "terminal.background": "#282c35",
+    "terminal.background": "#2a2e3a",
     "terminal.border": "#abb2bf",
     "terminal.foreground": "#abb2bf",
     "terminal.selectionBackground": "#abb2bf30",
@@ -732,7 +744,7 @@
     {
       "scope": "support.type.property-name",
       "settings": {
-        "foreground": "#cccccc"
+        "foreground": "#cbcbcb"
       }
     },
     {
@@ -813,7 +825,7 @@
     {
       "scope": "entity.other.attribute-name.id",
       "settings": {
-        "foreground": "#3e9eec"
+        "foreground": "#7ace81"
       }
     },
     {
@@ -844,7 +856,7 @@
     {
       "scope": "keyword.other.unit",
       "settings": {
-        "foreground": "#E06C75"
+        "foreground": "#2EA7B7"
       }
     },
     {
@@ -1653,9 +1665,9 @@
       }
     },
     {
-      "scope": "constant.numeric",
+      "scope": "constant.numeric.css",
       "settings": {
-        "foreground": "#e4a060"
+        "foreground": "#4cd1e0"
       }
     },
     {
@@ -1697,7 +1709,7 @@
     {
       "scope": "variable.other.readwrite",
       "settings": {
-        "foreground": "#cbcbcb"
+        "foreground": "#cacaca"
       }
     }
   ]
