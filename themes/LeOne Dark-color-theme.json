@@ -20,7 +20,7 @@
     "editor.foreground": "#abb2bf",
 
     "editor.selectionBackground": "#67769660",
-    "editor.selectionForeground": "#ff0000",
+    "editor.selectionForeground": "#f00",
 
     "editor.selectionHighlightBorder": "#515a6b",
     "editor.selectionHighlightBackground": "#2c313c",
@@ -33,8 +33,9 @@
     "editor.lineHighlightBackground": "#2c313c",
 
     "editor.findMatchBackground": "#111",
-    "editor.findMatchBorder": "#515a6b",
+    "editor.findMatchBorder": "#50AF8E",
     "editor.findMatchHighlightBorder": "#515a6b",
+    "editor.findMatchHighlightBackground": "#67769660",
 
     "editorBracketMatch.background": "#515a6b",
     "editorBracketMatch.border": "#515a6b",
@@ -872,6 +873,16 @@
       ],
       "settings": {
         "foreground": "#E5C07B"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.ng-binding-name.begin",
+        "punctuation.definition.ng-binding-name.end",
+        "meta.ng-binding.property"
+      ],
+      "settings": {
+        "foreground": "#cccccc"
       }
     },
     {
