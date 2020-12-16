@@ -876,6 +876,16 @@
       }
     },
     {
+      "scope": [
+        "punctuation.definition.ng-binding-name.begin",
+        "punctuation.definition.ng-binding-name.end",
+        "meta.ng-binding.property"
+      ],
+      "settings": {
+        "foreground": "#cccccc"
+      }
+    },
+    {
       "scope": "markup.italic, punctuation.definition.italic,todo.emphasis",
       "settings": {
         "foreground": "#C678DD"
