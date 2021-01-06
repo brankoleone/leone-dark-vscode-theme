@@ -1,9 +1,9 @@
 {
 	"name": "leone-dark",
 	"icon": "images/icon.png",
-  "displayName": "LeOne Dark",
+	"displayName": "LeOne Dark",
 	"description": "Leone Dark Color Theme based on One Dark Pro",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"homepage": "https://github.com/brankoleone/leone-dark-vscode-theme.git",
 	"repository": {
 		"url": "https://github.com/brankoleone/leone-dark-vscode-theme.git",
