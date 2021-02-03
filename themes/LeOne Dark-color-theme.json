@@ -663,7 +663,7 @@
     {
       "scope": "support.class, entity.name.type.class",
       "settings": {
-        "foreground": "#E5C07B"
+        "foreground": "#e4a060"
       }
     },
     {
@@ -1682,19 +1682,13 @@
       }
     },
     {
-      "scope": ["entity.name.type.class"],
-      "settings": {
-        "foreground": "#e4a060"
-      }
-    },
-    {
       "scope": "entity.name",
       "settings": {
         "foreground": "#E06C75"
       }
     },
     {
-      "scope": "entity.name.type",
+      "scope": "entity.name.type.interface",
       "settings": {
         "foreground": "#2EA7B7"
       }
@@ -1715,6 +1709,12 @@
       "scope": "variable.other",
       "settings": {
         "foreground": "#E06C75"
+      }
+    },
+    {
+      "scope": "entity.name.function, entity.name.function.member, entity.name.type",
+      "settings": {
+        "foreground": "#61AFEF"
       }
     },
     {
