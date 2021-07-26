@@ -59,7 +59,7 @@
     "editorWarning.foreground": "#d19a66",
     "editorWhitespace.foreground": "#3b4048",
     "editorWidget.background": "#212530",
-    "focusBorder": "#373E49",
+    "focusBorder": "#252A35",
     "input.background": "#2A2F3A",
     "list.activeSelectionBackground": "#2C313B",
     "list.activeSelectionForeground": "#d7dae0",
@@ -80,10 +80,11 @@
     "scrollbarSlider.background": "#4e566660",
     "scrollbarSlider.hoverBackground": "#5a637580",
     "sideBar.background": "#1c202b",
-    "sideBar.foreground": "#acacac",
+    "sideBar.foreground": "#8C8C8C",
     "sideBar.border": "#252A35",
-    "gitDecoration.ignoredResourceForeground": "#5c5c5c",
+    "gitDecoration.ignoredResourceForeground": "#4C4C4C",
     "sideBarSectionHeader.background": "#2E343F",
+    "sideBarSectionHeader.border": "#252A35",
     "statusBar.background": "#33548d",
     "statusBar.debuggingBackground": "#50AF8E",
     "statusBar.debuggingForeground": "#000000",
@@ -661,7 +662,13 @@
       }
     },
     {
-      "scope": "support.class, entity.name.type.class",
+      "scope": "support.class",
+      "settings": {
+        "foreground": "#50AF8E"
+      }
+    },
+    {
+      "scope": "entity.name.type.class",
       "settings": {
         "foreground": "#e4a060"
       }
@@ -788,7 +795,7 @@
     {
       "scope": "constant.numeric",
       "settings": {
-        "foreground": "#D19A66"
+        "foreground": "#4CD1E0"
       }
     },
     {
