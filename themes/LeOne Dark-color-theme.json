@@ -37,6 +37,9 @@
     "editor.findMatchHighlightBorder": "#515a6b",
     "editor.findMatchHighlightBackground": "#67769660",
 
+    "editorInlayHint.foreground": "#65738b",
+    "editorInlayHint.background": "#67769630",
+
     "editorBracketMatch.background": "#515a6b",
     "editorBracketMatch.border": "#515a6b",
     "editorCursor.background": "#ffffffc9",

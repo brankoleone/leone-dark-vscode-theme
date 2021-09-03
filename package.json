@@ -1,7 +1,7 @@
 {
 	"name": "leone-dark",
 	"icon": "images/icon.png",
-	"displayName": "LeOne Dark",
+	"displayName": "Leone Dark",
 	"description": "Leone Dark Color Theme based on One Dark Pro",
 	"version": "0.1.1",
 	"homepage": "https://github.com/brankoleone/leone-dark-vscode-theme.git",
@@ -25,14 +25,14 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "LeOne Dark",
+				"label": "Leone Dark",
 				"uiTheme": "vs-dark",
 				"path": "./themes/LeOne Dark-color-theme.json"
 			}
 		]
 	},
 	"scripts": {
-		"publish": "vsce publish patch",
+		"publish:patch": "vsce publish patch",
 		"publish:minor": "vsce publish minor",
 		"publish:major": "vsce publish major"
 	},
