@@ -88,9 +88,11 @@
 
     "gitDecoration.ignoredResourceForeground": "#4C4C4C",
     "gitDecoration.modifiedResourceForeground": "#61AFEF",
+    "gitDecoration.deletedResourceForeground": "#ff616e",
     "gitDecoration.untrackedResourceForeground": "#7CCA8D",
     "editorGutter.addedBackground": "#50AF8E",
     "editorGutter.modifiedBackground": "#518ec7",
+    "editorGutter.deletedBackground": "#e05561",
 
     "sideBarSectionHeader.background": "#2E343F",
     "sideBarSectionHeader.border": "#252A35",
