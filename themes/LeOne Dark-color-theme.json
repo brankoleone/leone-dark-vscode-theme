@@ -85,7 +85,13 @@
     "sideBar.background": "#1c202b",
     "sideBar.foreground": "#8C8C8C",
     "sideBar.border": "#252A35",
+
     "gitDecoration.ignoredResourceForeground": "#4C4C4C",
+    "gitDecoration.modifiedResourceForeground": "#61AFEF",
+    "gitDecoration.untrackedResourceForeground": "#7CCA8D",
+    "editorGutter.addedBackground": "#50AF8E",
+    "editorGutter.modifiedBackground": "#518ec7",
+
     "sideBarSectionHeader.background": "#2E343F",
     "sideBarSectionHeader.border": "#252A35",
     "statusBar.background": "#33548d",
@@ -100,6 +106,7 @@
     "tab.activeBackground": "#252A35",
     "tab.activeForeground": "#dcdcdc",
     "tab.border": "#212530",
+    "tab.activeBorderTop": "#47bfee",
     "tab.hoverBackground": "#2A2F3A",
     "tab.inactiveBackground": "#2E343F",
     "tab.unfocusedHoverBackground": "#323842",
