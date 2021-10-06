@@ -25,16 +25,16 @@
     "editor.background": "#212530",
     "editor.foreground": "#abb2bf",
 
-    "editor.selectionBackground": "#373E49",
+    "editor.selectionBackground": "#455368",
     "editor.selectionForeground": "#f00",
 
-    "editor.selectionHighlightBorder": "#515a6b",
+    "editor.selectionHighlightBorder": "#00000000", // no-color
     "editor.selectionHighlightBackground": "#2c313c",
 
-    "editor.wordHighlightBackground": "#00000000",
-    "editor.wordHighlightBorder": "#515a6b",
-    "editor.wordHighlightStrongBackground": "#00000000",
-    "editor.wordHighlightStrongBorder": "#738097",
+    "editor.wordHighlightBackground": "#00000000", // no-color
+    "editor.wordHighlightBorder": "#00000000", // no-color
+    "editor.wordHighlightStrongBackground": "#00000000", // no-color
+    "editor.wordHighlightStrongBorder": "#00000000", // no-color
 
     "editor.lineHighlightBackground": "#2c313c",
 
