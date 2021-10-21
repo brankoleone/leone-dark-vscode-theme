@@ -1,4 +1,8 @@
+# Folders
 node_modules
+logo
+
+# Files
 *.vsix
 WORKFLOW.md
-.code-workspace
+*.code-workspace

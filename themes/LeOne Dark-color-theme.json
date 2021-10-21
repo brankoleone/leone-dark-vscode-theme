@@ -880,7 +880,7 @@
       "scope": "entity.other.attribute-name.class",
       "settings": {
         "foreground": "#61AFEF",
-        "fontStyle": "normal"
+        "fontStyle": ""
       }
     },
     {
