@@ -27,7 +27,12 @@
 			{
 				"label": "Leone Dark",
 				"uiTheme": "vs-dark",
-				"path": "./themes/LeOne Dark-color-theme.json"
+				"path": "./themes/Leone Dark-color-theme.json"
+			},
+			{
+				"label": "Leone Craft",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Leone Craft-color-theme.json"
 			}
 		]
 	},
