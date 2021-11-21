@@ -1,49 +1,61 @@
 {
-	"name": "leone-dark",
-	"icon": "images/icon.png",
-	"displayName": "Leone Dark",
-	"description": "Leone Dark Color Theme based on One Dark Pro",
-	"version": "0.2.1",
-	"homepage": "https://github.com/brankoleone/leone-dark-vscode-theme.git",
-	"repository": {
-		"url": "https://github.com/brankoleone/leone-dark-vscode-theme.git",
-		"type": "git"
-	},
-	"publisher": "brankoleone",
-	"engines": {
-		"vscode": "^1.51.0"
-	},
-	"categories": [
-		"Themes"
-	],
-	"keywords": [
-		"One Dark",
-		"Dark Theme",
-		"Leone",
-		"Leone Dark"
-	],
-	"contributes": {
-		"themes": [
-			{
-				"label": "Leone Dark",
-				"uiTheme": "vs-dark",
-				"path": "./themes/Leone Dark-color-theme.json"
-			},
-			{
-				"label": "Leone Craft",
-				"uiTheme": "vs-dark",
-				"path": "./themes/Leone Craft-color-theme.json"
-			}
-		]
-	},
-	"scripts": {
-		"publish:patch": "vsce publish patch",
-		"publish:minor": "vsce publish minor",
-		"publish:major": "vsce publish major"
-	},
-	"__metadata": {
-		"id": "cc37a445-bbc5-435c-b406-8851b4e280a8",
-		"publisherDisplayName": "brankoleone",
-		"publisherId": "a7e31eb0-3cfd-404d-a2db-67979587e1a2"
-	}
+  "name": "leone-dark",
+  "icon": "images/icon.png",
+  "displayName": "Leone Dark",
+  "description": "Leone Dark Color Theme based on One Dark Pro",
+  "version": "0.2.1",
+  "homepage": "https://github.com/brankoleone/leone-dark-vscode-theme.git",
+  "repository": {
+    "url": "https://github.com/brankoleone/leone-dark-vscode-theme.git",
+    "type": "git"
+  },
+  "publisher": "brankoleone",
+  "engines": {
+    "vscode": "^1.51.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "One Dark",
+    "Dark Theme",
+    "Leone",
+    "Leone Dark"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Leone Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Leone Dark-color-theme.json"
+      },
+      {
+        "label": "Leone Craft",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Leone Craft-color-theme.json"
+      },
+      {
+        "label": "Leone Orca",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Leone Orca-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "publish:patch": "vsce publish patch",
+    "publish:minor": "vsce publish minor",
+    "publish:major": "vsce publish major",
+    "generate": "node config/index.js generate"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.7",
+    "json-beautify": "^1.1.1",
+    "json-templates": "^4.2.0",
+    "yargs": "^17.2.1"
+  },
+  "__metadata": {
+    "id": "cc37a445-bbc5-435c-b406-8851b4e280a8",
+    "publisherDisplayName": "brankoleone",
+    "publisherId": "a7e31eb0-3cfd-404d-a2db-67979587e1a2"
+  }
 }
