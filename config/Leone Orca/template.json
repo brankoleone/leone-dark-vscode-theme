@@ -362,6 +362,12 @@
       }
     },
     {
+      "scope": "entity.other.attribute-name.id",
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
       "scope": "entity.other.ng-binding-name",
       "settings": {
         "foreground": "{{mint}}"

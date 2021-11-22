@@ -253,6 +253,10 @@
       "settings": { "foreground": "#98C379", "fontStyle": "italic" }
     },
     {
+      "scope": "entity.other.attribute-name.id",
+      "settings": { "foreground": "#E5C07B" }
+    },
+    {
       "scope": "entity.other.ng-binding-name",
       "settings": { "foreground": "#50AF8E" }
     },
