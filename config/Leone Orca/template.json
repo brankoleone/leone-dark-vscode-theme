@@ -296,7 +296,7 @@
       }
     },
     {
-      "scope": "comment",
+      "scope": ["comment", "punctuation.definition.comment"],
       "settings": {
         "foreground": "{{nevada}}"
       }
@@ -375,7 +375,7 @@
       }
     },
     {
-      "scope": "entity.other.attribute-name.class",
+      "scope": ["entity.other.attribute-name.class", "punctuation.definition.entity"],
       "settings": {
         "foreground": "{{deYork}}"
       }
@@ -393,7 +393,11 @@
       }
     },
     {
-      "scope": ["punctuation.definition.string", "string.quoted.double punctuation.definition.block"],
+      "scope": [
+        "punctuation.definition.string",
+        "string.quoted.double punctuation.definition.block",
+        "text.html.derivative punctuation.definition.block"
+      ],
       "settings": {
         "foreground": "{{chalky}}"
       }
