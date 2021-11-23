@@ -170,6 +170,7 @@
       "scope": [
         "variable.other.readwrite.alias",
         "meta.type.annotation entity.name.type",
+        "meta.return.type entity.name.type",
         "entity.other.inherited-class",
         "meta.object.member variable.other.readwrite"
       ],
