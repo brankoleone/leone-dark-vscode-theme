@@ -159,6 +159,10 @@
       "settings": { "foreground": "#61AFEF" }
     },
     {
+      "scope": [ "support.function" ],
+      "settings": { "foreground": "#61AFEF" }
+    },
+    {
       "scope": [ "meta.class entity.name.type.class" ],
       "settings": { "foreground": "#4CD1E0" }
     },
@@ -258,6 +262,14 @@
       "settings": { "foreground": "#E5C07B" }
     },
     {
+      "scope": "entity.other.attribute-name.class",
+      "settings": { "foreground": "#7CCA8D" }
+    },
+    {
+      "scope": "meta.at-rule.apply.tailwind entity.other.attribute-name.class",
+      "settings": { "foreground": "#9FA0FF" }
+    },
+    {
       "scope": "entity.other.ng-binding-name",
       "settings": { "foreground": "#50AF8E" }
     },
@@ -277,8 +289,13 @@
       "settings": { "foreground": "#6A76DF" }
     },
     {
-      "scope": "support.constant.font-name",
+      "scope": [ "support.constant.font-name", "meta.property-value" ],
       "settings": { "foreground": "#E5C07B" }
+    },
+    { "scope": "punctuation", "settings": { "foreground": "#ABABAB" } },
+    {
+      "scope": "punctuation.definition.keyword",
+      "settings": { "foreground": "#C678DD" }
     },
     {
       "scope": "support.type.vendored",
