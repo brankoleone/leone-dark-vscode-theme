@@ -190,9 +190,14 @@
         "variable",
         "expression.ng variable.other.readwrite",
         "support.type.property-name",
+        "punctuation.support.type.property-name",
         "meta.object-literal.key"
       ],
       "settings": { "foreground": "#A9DEF9" }
+    },
+    {
+      "scope": "punctuation.support.type.property-name",
+      "settings": { "foreground": "#61AFEF" }
     },
     {
       "scope": [ "meta.ng-binding.event expression.ng variable.other.readwrite" ],

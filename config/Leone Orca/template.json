@@ -252,10 +252,17 @@
         "variable",
         "expression.ng variable.other.readwrite",
         "support.type.property-name",
+        "punctuation.support.type.property-name",
         "meta.object-literal.key"
       ],
       "settings": {
         "foreground": "{{nonPhotoBlue}}"
+      }
+    },
+    {
+      "scope": "punctuation.support.type.property-name",
+      "settings": {
+        "foreground": "{{malibu}}"
       }
     },
     {
