@@ -64,7 +64,7 @@
     "list.activeSelectionForeground": "#FFF",
     "list.focusBackground": "#383E4A",
     "list.focusForeground": "#ABABAB",
-    "list.highlightForeground": "#F0A45D",
+    "list.highlightForeground": "#47BFEE",
     "list.hoverBackground": "#292d37",
     "list.hoverForeground": "#ABABAB",
     "list.inactiveSelectionBackground": "#2C313A",
@@ -144,7 +144,10 @@
       "scope": [ "source.ignore", "keyword.other.definition" ],
       "settings": { "foreground": "#A9DEF9" }
     },
-    { "scope": "storage", "settings": { "foreground": "#6A76DF" } },
+    {
+      "scope": [ "storage", "storage.type" ],
+      "settings": { "foreground": "#6A76DF" }
+    },
     {
       "scope": [ "keyword.control" ],
       "settings": { "foreground": "#C678DD" }
@@ -159,6 +162,10 @@
       "settings": { "foreground": "#61AFEF" }
     },
     {
+      "scope": [ "entity.name.namespace" ],
+      "settings": { "foreground": "#7CCA8D" }
+    },
+    {
       "scope": [ "support.function" ],
       "settings": { "foreground": "#61AFEF" }
     },
@@ -167,18 +174,27 @@
       "settings": { "foreground": "#4CD1E0" }
     },
     {
-      "scope": [ "entity.name.type.interface" ],
+      "scope": [
+        "entity.name.type.interface",
+        "entity.name.type.alias, entity.name.type.enum"
+      ],
       "settings": { "foreground": "#2EA7B7" }
     },
     {
       "scope": [
         "variable.other.readwrite.alias",
         "meta.type.annotation entity.name.type",
+        "meta.type.parameters entity.name.type",
         "meta.return.type entity.name.type",
         "entity.other.inherited-class",
-        "meta.object.member variable.other.readwrite"
+        "meta.object.member variable.other.readwrite",
+        "entity.name.type.rust"
       ],
       "settings": { "foreground": "#9FA0FF" }
+    },
+    {
+      "scope": [ "entity.name.type.struct" ],
+      "settings": { "foreground": "#E5C07B" }
     },
     {
       "scope": [ "constant.language", "support.type.builtin" ],
@@ -191,7 +207,10 @@
         "expression.ng variable.other.readwrite",
         "support.type.property-name",
         "punctuation.support.type.property-name",
-        "meta.object-literal.key"
+        "meta.object-literal.key",
+        "variable.other.rust",
+        "variable.other.readwrite",
+        "keyword.key"
       ],
       "settings": { "foreground": "#A9DEF9" }
     },
@@ -222,6 +241,16 @@
       "settings": { "foreground": "#5F6A79" }
     },
     {
+      "scope": [
+        "source.rust meta.attribute.rust punctuation.definition.attribute.rust"
+      ],
+      "settings": { "foreground": "#47BFEE" }
+    },
+    {
+      "scope": [ "source.rust meta.attribute.rust" ],
+      "settings": { "foreground": "#6A76DF" }
+    },
+    {
       "scope": [ "keyword.operator" ],
       "settings": { "foreground": "#2EA7B7" }
     },
@@ -242,8 +271,15 @@
       "settings": { "foreground": "#ABABAB" }
     },
     {
-      "scope": [ "punctuation.definition.template-expression" ],
+      "scope": [
+        "punctuation.definition.template-expression",
+        "punctuation.section.embedded.rust"
+      ],
       "settings": { "foreground": "#C678DD" }
+    },
+    {
+      "scope": [ "punctuation.section.embedded.rust" ],
+      "settings": { "foreground": "#E5C07B" }
     },
     {
       "scope": [ "support.type.primitive" ],
@@ -251,6 +287,10 @@
     },
     {
       "scope": [ "support.class.builtin", "meta.block entity.name.type" ],
+      "settings": { "foreground": "#E06C75" }
+    },
+    {
+      "scope": [ "meta.class support.class.error" ],
       "settings": { "foreground": "#E06C75" }
     },
     { "scope": "entity.name.tag", "settings": { "foreground": "#E06C75" } },

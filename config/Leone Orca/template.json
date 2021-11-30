@@ -78,7 +78,7 @@
     "list.activeSelectionForeground": "#FFF",
     "list.focusBackground": "#383E4A",
     "list.focusForeground": "{{silverChalice}}",
-    "list.highlightForeground": "#F0A45D",
+    "list.highlightForeground": "{{pictonBlue}}",
     "list.hoverBackground": "#292d37",
     "list.hoverForeground": "{{silverChalice}}",
     "list.inactiveSelectionBackground": "#2C313A",
@@ -175,7 +175,7 @@
       }
     },
     {
-      "scope": "storage",
+      "scope": ["storage", "storage.type"],
       "settings": {
         "foreground": "{{indigo}}"
       }
@@ -206,6 +206,12 @@
       }
     },
     {
+      "scope": ["entity.name.namespace"],
+      "settings": {
+        "foreground": "{{deYork}}"
+      }
+    },
+    {
       "scope": ["support.function"],
       "settings": {
         "foreground": "{{malibu}}"
@@ -218,7 +224,7 @@
       }
     },
     {
-      "scope": ["entity.name.type.interface"],
+      "scope": ["entity.name.type.interface", "entity.name.type.alias, entity.name.type.enum"],
       "settings": {
         "foreground": "{{pelorous}}"
       }
@@ -227,12 +233,20 @@
       "scope": [
         "variable.other.readwrite.alias",
         "meta.type.annotation entity.name.type",
+        "meta.type.parameters entity.name.type",
         "meta.return.type entity.name.type",
         "entity.other.inherited-class",
-        "meta.object.member variable.other.readwrite"
+        "meta.object.member variable.other.readwrite",
+        "entity.name.type.rust"
       ],
       "settings": {
         "foreground": "{{portage}}"
+      }
+    },
+    {
+      "scope": ["entity.name.type.struct"],
+      "settings": {
+        "foreground": "{{chalky}}"
       }
     },
     {
@@ -253,7 +267,10 @@
         "expression.ng variable.other.readwrite",
         "support.type.property-name",
         "punctuation.support.type.property-name",
-        "meta.object-literal.key"
+        "meta.object-literal.key",
+        "variable.other.rust",
+        "variable.other.readwrite",
+        "keyword.key"
       ],
       "settings": {
         "foreground": "{{nonPhotoBlue}}"
@@ -309,6 +326,18 @@
       }
     },
     {
+      "scope": ["source.rust meta.attribute.rust punctuation.definition.attribute.rust"],
+      "settings": {
+        "foreground": "{{pictonBlue}}"
+      }
+    },
+    {
+      "scope": ["source.rust meta.attribute.rust"],
+      "settings": {
+        "foreground": "{{indigo}}"
+      }
+    },
+    {
       "scope": ["keyword.operator"],
       "settings": {
         "foreground": "{{pelorous}}"
@@ -339,9 +368,15 @@
       }
     },
     {
-      "scope": ["punctuation.definition.template-expression"],
+      "scope": ["punctuation.definition.template-expression", "punctuation.section.embedded.rust"],
       "settings": {
         "foreground": "{{softPurple}}"
+      }
+    },
+    {
+      "scope": ["punctuation.section.embedded.rust"],
+      "settings": {
+        "foreground": "{{chalky}}"
       }
     },
     {
@@ -352,6 +387,12 @@
     },
     {
       "scope": ["support.class.builtin", "meta.block entity.name.type"],
+      "settings": {
+        "foreground": "{{froly}}"
+      }
+    },
+    {
+      "scope": ["meta.class support.class.error"],
       "settings": {
         "foreground": "{{froly}}"
       }
