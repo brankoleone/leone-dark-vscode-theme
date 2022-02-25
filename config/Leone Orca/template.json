@@ -224,7 +224,7 @@
       }
     },
     {
-      "scope": ["entity.name.type.interface", "entity.name.type.alias, entity.name.type.enum"],
+      "scope": ["entity.name.type.interface", "entity.name.type.alias", "entity.name.type.enum"],
       "settings": {
         "foreground": "{{pelorous}}"
       }
@@ -285,7 +285,7 @@
     {
       "scope": ["meta.ng-binding.event expression.ng variable.other.readwrite"],
       "settings": {
-        "foreground": "{{mint}}"
+        "foreground": "{{nonPhotoBlue}}"
       }
     },
     {

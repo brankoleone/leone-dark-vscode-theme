@@ -176,7 +176,8 @@
     {
       "scope": [
         "entity.name.type.interface",
-        "entity.name.type.alias, entity.name.type.enum"
+        "entity.name.type.alias",
+        "entity.name.type.enum"
       ],
       "settings": { "foreground": "#2EA7B7" }
     },
@@ -220,7 +221,7 @@
     },
     {
       "scope": [ "meta.ng-binding.event expression.ng variable.other.readwrite" ],
-      "settings": { "foreground": "#50AF8E" }
+      "settings": { "foreground": "#A9DEF9" }
     },
     {
       "scope": [ "variable.other.constant", "support.variable.property" ],
