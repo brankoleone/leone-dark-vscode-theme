@@ -218,7 +218,12 @@
       }
     },
     {
-      "scope": ["meta.class entity.name.type.class"],
+      "scope": [
+        "meta.class entity.name.type.class",
+        "meta.class entity.name.function",
+        "new.expr entity.name.function",
+        "new.expr support.class"
+      ],
       "settings": {
         "foreground": "{{turquoise}}"
       }
@@ -406,7 +411,7 @@
     {
       "scope": "entity.name.tag support.class.component",
       "settings": {
-        "foreground": "{{mint}}"
+        "foreground": "{{watermelon}}"
       }
     },
     {

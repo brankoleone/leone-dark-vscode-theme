@@ -170,7 +170,12 @@
       "settings": { "foreground": "#61AFEF" }
     },
     {
-      "scope": [ "meta.class entity.name.type.class" ],
+      "scope": [
+        "meta.class entity.name.type.class",
+        "meta.class entity.name.function",
+        "new.expr entity.name.function",
+        "new.expr support.class"
+      ],
       "settings": { "foreground": "#4CD1E0" }
     },
     {
@@ -297,7 +302,7 @@
     { "scope": "entity.name.tag", "settings": { "foreground": "#E06C75" } },
     {
       "scope": "entity.name.tag support.class.component",
-      "settings": { "foreground": "#50AF8E" }
+      "settings": { "foreground": "#FF616E" }
     },
     {
       "scope": [
