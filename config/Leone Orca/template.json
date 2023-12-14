@@ -51,8 +51,8 @@
 
     "editorHoverWidget.background": "{{blackPearl}}",
     "editorHoverWidget.border": "{{mirage}}",
-    "editorIndentGuide.activeBackground": "#C8C8C859",
-    "editorIndentGuide.background": "{{blackRock}}",
+    "editorIndentGuide.activeBackground1": "#C8C8C859",
+    "editorIndentGuide.background1": "{{blackRock}}",
     "editorLineNumber.activeForeground": "{{chambray}}",
     "editorLineNumber.foreground": "{{fiord}}",
     "editorMarkerNavigation.background": "{{blackPearl}}",
@@ -177,13 +177,15 @@
     {
       "scope": ["storage", "storage.type"],
       "settings": {
-        "foreground": "{{indigo}}"
+        "foreground": "{{indigo}}",
+        "fontStyle": "italic"
       }
     },
     {
       "scope": ["keyword.control"],
       "settings": {
-        "foreground": "{{softPurple}}"
+        "foreground": "{{softPurple}}",
+        "fontStyle": "italic"
       }
     },
     {
@@ -235,6 +237,12 @@
       }
     },
     {
+      "scope": ["meta.at-rule"],
+      "settings": {
+        "foreground": "{{portage}}"
+      }
+    },
+    {
       "scope": [
         "variable.other.readwrite.alias",
         "meta.type.annotation entity.name.type",
@@ -271,7 +279,6 @@
         "variable",
         "expression.ng variable.other.readwrite",
         "support.type.property-name",
-        "punctuation.support.type.property-name",
         "meta.object-literal.key",
         "variable.other.rust",
         "variable.other.readwrite",
@@ -284,7 +291,7 @@
     {
       "scope": "punctuation.support.type.property-name",
       "settings": {
-        "foreground": "{{malibu}}"
+        "foreground": "{{indigo}}"
       }
     },
     {
@@ -452,7 +459,7 @@
         "text.html.derivative punctuation.definition.block"
       ],
       "settings": {
-        "foreground": "{{chalky}}"
+        "foreground": "{{brown}}"
       }
     },
     {
@@ -501,6 +508,43 @@
       "scope": ["source"],
       "settings": {
         "foreground": "{{silverChalice}}"
+      }
+    },
+    {
+      "scope": ["source.python"],
+      "settings": {
+        "foreground": "{{nonPhotoBlue}}"
+      }
+    },
+    {
+      "scope": ["source.python support.type", "support.function.builtin"],
+      "settings": {
+        "foreground": "{{pelorous}}",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": ["source.python meta.function", "source.python meta.function-call.generic"],
+      "settings": {
+        "foreground": "{{malibu}}"
+      }
+    },
+    {
+      "scope": ["meta.function-call"],
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": ["markup.heading.markdown", "markup.heading entity.name"],
+      "settings": {
+        "foreground": "{{malibu}}"
+      }
+    },
+    {
+      "scope": ["punctuation.definition.heading.markdown"],
+      "settings": {
+        "foreground": "{{fiord}}"
       }
     }
   ]
