@@ -164,7 +164,7 @@
       "foreground": "{{whiskey}}"
     },
     "variable.defaultLibrary": {
-      "foreground": "{{chalky}}"
+      "foreground": "{{froly}}"
     }
   },
   "tokenColors": [
@@ -309,7 +309,7 @@
     {
       "scope": "variable.other.readwrite",
       "settings": {
-        "foreground": "{{iron}}"
+        "foreground": "{{pelorous}}"
       }
     },
     {
@@ -508,6 +508,12 @@
       "scope": ["source"],
       "settings": {
         "foreground": "{{silverChalice}}"
+      }
+    },
+    {
+      "scope": ["source.ini"],
+      "settings": {
+        "foreground": "{{whiskey}}"
       }
     },
     {

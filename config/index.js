@@ -4,7 +4,7 @@ const yargs = require('yargs');
 const parse = require('json-templates');
 const { hideBin } = require('yargs/helpers');
 
-const configFileName = 'config.json';
+const paletteFileName = 'palette.json';
 const templateFileName = 'template.json';
 const outputThemesDir = 'themes/';
 
@@ -22,7 +22,7 @@ yargs
       });
     },
     function (argv) {
-      const configFile = `config/${argv.themeName}/${configFileName}`;
+      const paletteFile = `config/${argv.themeName}/${paletteFileName}`;
       const templateFile = `config/${argv.themeName}/${templateFileName}`;
       const themeFile = `${outputThemesDir}/${argv.themeName}-color-theme.json`;
 
@@ -31,13 +31,13 @@ yargs
       let configFileData = null;
 
       try {
-        configFileData = fs.readFileSync(configFile, 'utf-8');
+        configFileData = fs.readFileSync(paletteFile, 'utf-8');
       } catch (err) {
         // If the type is not what you want, then just throw the error again.
         if (err.code !== 'ENOENT') throw err;
 
         // Handle a file-not-found error
-        console.log(`There's no such config file: ${configFile}`);
+        console.log(`There's no such config file: ${paletteFile}`);
       }
       if (configFileData) {
         const config = JSON.parse(configFileData);

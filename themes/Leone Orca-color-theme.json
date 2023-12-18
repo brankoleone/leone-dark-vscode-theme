@@ -137,7 +137,7 @@
   "semanticTokenColors": {
     "enumMember": { "foreground": "#A9DEF9" },
     "variable.constant": { "foreground": "#D19A66" },
-    "variable.defaultLibrary": { "foreground": "#E5C07B" }
+    "variable.defaultLibrary": { "foreground": "#E06C75" }
   },
   "tokenColors": [
     {
@@ -234,7 +234,7 @@
     },
     {
       "scope": "variable.other.readwrite",
-      "settings": { "foreground": "#CACACA" }
+      "settings": { "foreground": "#2EA7B7" }
     },
     { "scope": "variable.language", "settings": { "foreground": "#E06C75" } },
     { "scope": "variable.scss", "settings": { "foreground": "#50AF8E" } },
@@ -361,6 +361,7 @@
       "settings": { "foreground": "#6A76DF" }
     },
     { "scope": [ "source" ], "settings": { "foreground": "#ABABAB" } },
+    { "scope": [ "source.ini" ], "settings": { "foreground": "#D19A66" } },
     { "scope": [ "source.python" ], "settings": { "foreground": "#A9DEF9" } },
     {
       "scope": [ "source.python support.type", "support.function.builtin" ],
