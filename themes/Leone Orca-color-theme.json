@@ -234,7 +234,7 @@
     },
     {
       "scope": "variable.other.readwrite",
-      "settings": { "foreground": "#2EA7B7" }
+      "settings": { "foreground": "#A9DEF9" }
     },
     { "scope": "variable.language", "settings": { "foreground": "#E06C75" } },
     { "scope": "variable.scss", "settings": { "foreground": "#50AF8E" } },

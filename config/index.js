@@ -18,7 +18,7 @@ yargs
       yargs.positional('themeName', {
         type: 'string',
         default: 'Leone Craft',
-        describe: 'the theme name to be generated',
+        describe: 'the theme name to be generated'
       });
     },
     function (argv) {

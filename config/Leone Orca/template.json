@@ -309,7 +309,7 @@
     {
       "scope": "variable.other.readwrite",
       "settings": {
-        "foreground": "{{pelorous}}"
+        "foreground": "{{nonPhotoBlue}}"
       }
     },
     {
