@@ -240,7 +240,7 @@
     { "scope": "variable.scss", "settings": { "foreground": "#50AF8E" } },
     {
       "scope": "variable.parameter",
-      "settings": { "foreground": "#50AF8E", "fontStyle": "italic" }
+      "settings": { "foreground": "#99CABB", "fontStyle": "italic" }
     },
     {
       "scope": [ "comment", "punctuation.definition.comment" ],
