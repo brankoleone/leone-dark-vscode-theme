@@ -162,7 +162,7 @@
       "settings": { "foreground": "#61AFEF" }
     },
     {
-      "scope": [ "entity.name.namespace" ],
+      "scope": [ "entity.name.namespace", "entity.name.type.module" ],
       "settings": { "foreground": "#7CCA8D" }
     },
     {
@@ -180,6 +180,7 @@
     },
     {
       "scope": [
+        "entity.name.type",
         "entity.name.type.interface",
         "entity.name.type.alias",
         "entity.name.type.enum"
@@ -193,7 +194,7 @@
         "meta.type.annotation entity.name.type",
         "meta.type.parameters entity.name.type",
         "meta.return.type entity.name.type",
-        "entity.other.inherited-class",
+        "meta.interface entity.other.inherited-class",
         "meta.object.member variable.other.readwrite",
         "entity.name.type.rust"
       ],

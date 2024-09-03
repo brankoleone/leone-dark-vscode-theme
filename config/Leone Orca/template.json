@@ -208,7 +208,7 @@
       }
     },
     {
-      "scope": ["entity.name.namespace"],
+      "scope": ["entity.name.namespace", "entity.name.type.module"],
       "settings": {
         "foreground": "{{deYork}}"
       }
@@ -231,7 +231,12 @@
       }
     },
     {
-      "scope": ["entity.name.type.interface", "entity.name.type.alias", "entity.name.type.enum"],
+      "scope": [
+        "entity.name.type",
+        "entity.name.type.interface",
+        "entity.name.type.alias",
+        "entity.name.type.enum"
+      ],
       "settings": {
         "foreground": "{{pelorous}}"
       }
@@ -248,7 +253,7 @@
         "meta.type.annotation entity.name.type",
         "meta.type.parameters entity.name.type",
         "meta.return.type entity.name.type",
-        "entity.other.inherited-class",
+        "meta.interface entity.other.inherited-class",
         "meta.object.member variable.other.readwrite",
         "entity.name.type.rust"
       ],
