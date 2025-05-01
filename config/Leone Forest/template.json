@@ -326,7 +326,7 @@
     {
       "scope": "variable.scss",
       "settings": {
-        "foreground": "{{mint}}"
+        "foreground": "{{chalky}}"
       }
     },
     {
@@ -442,7 +442,7 @@
     {
       "scope": ["entity.other.attribute-name.class", "punctuation.definition.entity"],
       "settings": {
-        "foreground": "{{deYork}}"
+        "foreground": "{{whiskey}}"
       }
     },
     {

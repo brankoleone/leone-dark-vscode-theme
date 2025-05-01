@@ -238,7 +238,7 @@
       "settings": { "foreground": "#A9DEF9" }
     },
     { "scope": "variable.language", "settings": { "foreground": "#E06C75" } },
-    { "scope": "variable.scss", "settings": { "foreground": "#50AF8E" } },
+    { "scope": "variable.scss", "settings": { "foreground": "#E5C07B" } },
     {
       "scope": "variable.parameter",
       "settings": { "foreground": "#99CABB", "fontStyle": "italic" }
@@ -318,7 +318,7 @@
     },
     {
       "scope": [ "entity.other.attribute-name.class", "punctuation.definition.entity" ],
-      "settings": { "foreground": "#7CCA8D" }
+      "settings": { "foreground": "#D19A66" }
     },
     {
       "scope": "meta.at-rule.apply.tailwind entity.other.attribute-name.class",
