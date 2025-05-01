@@ -1,0 +1,562 @@
+{
+  "name": "{{name}}",
+  "type": "dark",
+  "colors": {
+    "activityBar.background": "{{midnightExpress}}",
+    "activityBar.foreground": "{{silverChalice}}",
+    "activityBarBadge.background": "{{pictonBlue}}",
+    "activityBarBadge.foreground": "{{chambray}}",
+    "activityBar.activeBackground": "{{chambray}}",
+    "activityBar.activeBorder": "{{pictonBlue}}",
+    "activityBar.inactiveForeground": "{{silverChalice}}",
+
+    "button.background": "#33548D",
+    "button.foreground": "#D7DAE0",
+    "button.secondaryBackground": "#404754",
+    "button.secondaryForeground": "#D7DAE0",
+
+    "debugToolBar.background": "{{blackPearl}}",
+    "diffEditor.insertedTextBackground": "#00809b33",
+    "dropdown.background": "#2E343F",
+    "dropdown.border": "#333944",
+
+    "editor.foreground": "{{silverChalice}}",
+    "editor.background": "{{blackPearl}}",
+
+    "editor.wordHighlightBackground": "#00000000",
+    "editor.wordHighlightBorder": "{{fiord}}",
+    "editor.wordHighlightStrongBackground": "#00000000",
+    "editor.wordHighlightStrongBorder": "{{pictonBlue}}",
+
+    "editor.lineHighlightBackground": "{{blackRock}}",
+
+    "editor.findMatchBackground": "#000",
+    "editor.findMatchBorder": "{{chalky}}",
+    "editor.findMatchHighlightBackground": "#000",
+    "editor.findMatchHighlightBorder": "{{whiskey}}",
+
+    "editorInlayHint.foreground": "#65738B",
+    "editorInlayHint.background": "#67769630",
+
+    "editorBracketMatch.background": "#000",
+    "editorBracketMatch.border": "#000",
+    "editorCursor.background": "#FFFFFFC9",
+    "editorCursor.foreground": "#528BFF",
+    "editorError.foreground": "#C24038",
+
+    "editorGroup.dropBackground": "#00000060",
+    "editorGroup.emptyBackground": "{{mirage}}",
+    "editorGroup.border": "{{mirage}}",
+    "editorGroupHeader.tabsBackground": "#1C202B",
+
+    "editorHoverWidget.background": "{{blackPearl}}",
+    "editorHoverWidget.border": "{{mirage}}",
+    "editorIndentGuide.activeBackground1": "#C8C8C859",
+    "editorIndentGuide.background1": "{{blackRock}}",
+    "editorLineNumber.activeForeground": "{{chambray}}",
+    "editorLineNumber.foreground": "{{fiord}}",
+    "editorMarkerNavigation.background": "{{blackPearl}}",
+    "editorRuler.foreground": "#ABB2BF26",
+    "editorSuggestWidget.background": "{{blackPearl}}",
+    "editorSuggestWidget.border": "{{mirage}}",
+    "editorSuggestWidget.selectedBackground": "{{blackRock}}",
+    "editorWarning.foreground": "{{whiskey}}",
+    "editorWhitespace.foreground": "#00000020",
+    "editorWidget.background": "{{blackPearl}}",
+
+    "editor.selectionBackground": "{{fiord}}",
+    "editor.selectionForeground": "#F0F",
+    "editor.selectionHighlightBorder": "#00000000",
+    "editor.selectionHighlightBackground": "{{blackRock}}",
+
+    "focusBorder": "#252A35",
+
+    "input.background": "{{blackRock}}",
+    "inputOption.activeForeground": "{{pictonBlue}}",
+
+    "list.activeSelectionBackground": "#383E4A",
+    "list.activeSelectionForeground": "#FFF",
+    "list.focusBackground": "#383E4A",
+    "list.focusForeground": "{{silverChalice}}",
+    "list.highlightForeground": "{{pictonBlue}}",
+    "list.hoverBackground": "#292d37",
+    "list.hoverForeground": "{{silverChalice}}",
+    "list.inactiveSelectionBackground": "#2C313A",
+    "list.inactiveSelectionForeground": "#D7DAE0",
+    "list.warningForeground": "{{whiskey}}",
+
+    "menu.foreground": "#C8C8C8",
+    "panelSectionHeader.background": "#212530",
+    "peekViewEditor.background": "#1B1D23",
+    "peekViewEditor.matchHighlightBackground": "#29244B",
+    "peekViewResult.background": "#20252E",
+    "scrollbarSlider.activeBackground": "#747D9180",
+    "scrollbarSlider.background": "#4E566660",
+    "scrollbarSlider.hoverBackground": "#5A637580",
+
+    "gitDecoration.ignoredResourceForeground": "#343E50",
+    "gitDecoration.modifiedResourceForeground": "{{malibu}}",
+    "gitDecoration.deletedResourceForeground": "#FF616E",
+    "gitDecoration.untrackedResourceForeground": "{{deYork}}",
+    "editorGutter.addedBackground": "{{mint}}",
+    "editorGutter.modifiedBackground": "#518EC7",
+    "editorGutter.deletedBackground": "#E05561",
+
+    "sideBar.background": "#1C202B",
+    "sideBar.foreground": "#5F6A79",
+    "sideBar.border": "#252A35",
+    "sideBarSectionHeader.background": "#2E343F",
+    "sideBarSectionHeader.border": "#252A35",
+
+    "statusBar.background": "#33548D",
+    "statusBar.debuggingBackground": "#50AF8E",
+    "statusBar.debuggingForeground": "#000000",
+    "statusBar.debuggingBorder": "#32746D",
+    "statusBar.foreground": "#E7E7E7",
+    "statusBar.noFolderBackground": "#212530",
+    "statusBarItem.hoverBackground": "#2C313A",
+    "statusBarItem.remoteBackground": "#4D78CC",
+    "statusBarItem.remoteForeground": "#F8FAFD",
+
+    "sash.hoverBorder": "#33548D",
+
+    "tab.activeBackground": "#252A35",
+    "tab.activeForeground": "#DCDCDC",
+    "tab.border": "#212530",
+    "tab.activeBorderTop": "#47BFEE",
+    "tab.hoverBackground": "#2A2F3A",
+    "tab.inactiveBackground": "#2E343F",
+    "tab.unfocusedHoverBackground": "#323842",
+
+    "terminal.ansiBrightBlack": "#4F5666",
+    "terminal.ansiBrightBlue": "#47BFEE",
+    "terminal.ansiBrightCyan": "#4CD1E0",
+    "terminal.ansiBrightGreen": "#A5E075",
+    "terminal.ansiBrightMagenta": "#DE73FF",
+    "terminal.ansiBrightRed": "#FF616E",
+    "terminal.ansiBrightWhite": "#D7DAE0",
+    "terminal.ansiBrightYellow": "#F0A45D",
+    "terminal.ansiBlack": "#3F4451",
+    "terminal.ansiBlue": "#61AFEF",
+    "terminal.ansiCyan": "#56B6C2",
+    "terminal.ansiGreen": "#50AF8E",
+    "terminal.ansiMagenta": "#C162DE",
+    "terminal.ansiRed": "#E06C75",
+    "terminal.ansiWhite": "#E6E6E6",
+    "terminal.ansiYellow": "#E5C07B",
+    "terminal.background": "#212530",
+    "terminal.border": "#373E49",
+    "terminal.foreground": "#ABB2BF",
+    "terminal.selectionBackground": "#ABB2BF30",
+    "textLink.foreground": "{{malibu}}",
+
+    "titleBar.activeBackground": "#212530",
+    "titleBar.activeForeground": "#E7E7E7",
+    "titleBar.inactiveBackground": "#373E49",
+    "titleBar.inactiveForeground": "#E7E7E7"
+  },
+  "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "enumMember": {
+      "foreground": "{{nonPhotoBlue}}"
+    },
+    "variable.constant": {
+      "foreground": "{{whiskey}}"
+    },
+    "variable.defaultLibrary": {
+      "foreground": "{{froly}}"
+    }
+  },
+  "tokenColors": [
+    {
+      "scope": ["source.ignore", "keyword.other.definition"],
+      "settings": {
+        "foreground": "{{nonPhotoBlue}}"
+      }
+    },
+    {
+      "scope": ["storage", "storage.type"],
+      "settings": {
+        "foreground": "{{indigo}}",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": ["keyword.control"],
+      "settings": {
+        "foreground": "{{softPurple}}",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "string",
+      "settings": {
+        "foreground": "{{whiskey}}",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "string.regexp",
+      "settings": {
+        "foreground": "{{fountainBlue}}"
+      }
+    },
+    {
+      "scope": ["entity.name.function"],
+      "settings": {
+        "foreground": "{{malibu}}"
+      }
+    },
+    {
+      "scope": ["entity.name.namespace", "entity.name.type.module"],
+      "settings": {
+        "foreground": "{{deYork}}"
+      }
+    },
+    {
+      "scope": ["support.function"],
+      "settings": {
+        "foreground": "{{malibu}}"
+      }
+    },
+    {
+      "scope": [
+        "meta.class entity.name.type.class",
+        "meta.class entity.name.function",
+        "new.expr entity.name.function",
+        "new.expr support.class"
+      ],
+      "settings": {
+        "foreground": "{{turquoise}}"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.type",
+        "entity.name.type.interface",
+        "entity.name.type.alias",
+        "entity.name.type.enum"
+      ],
+      "settings": {
+        "foreground": "{{pelorous}}"
+      }
+    },
+    {
+      "scope": ["meta.at-rule"],
+      "settings": {
+        "foreground": "{{portage}}"
+      }
+    },
+    {
+      "scope": [
+        "variable.other.readwrite.alias",
+        "meta.type.annotation entity.name.type",
+        "meta.type.parameters entity.name.type",
+        "meta.return.type entity.name.type",
+        "meta.interface entity.other.inherited-class",
+        "meta.object.member variable.other.readwrite",
+        "entity.name.type.rust"
+      ],
+      "settings": {
+        "foreground": "{{portage}}"
+      }
+    },
+    {
+      "scope": ["entity.name.type.struct"],
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": ["constant.language", "support.type.builtin"],
+      "settings": {
+        "foreground": "{{indigo}}"
+      }
+    },
+    {
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "{{turquoise}}"
+      }
+    },
+    {
+      "scope": [
+        "variable",
+        "expression.ng variable.other.readwrite",
+        "support.type.property-name",
+        "meta.object-literal.key",
+        "variable.other.rust",
+        "variable.other.readwrite",
+        "keyword.key"
+      ],
+      "settings": {
+        "foreground": "{{nonPhotoBlue}}"
+      }
+    },
+    {
+      "scope": "punctuation.support.type.property-name",
+      "settings": {
+        "foreground": "{{indigo}}"
+      }
+    },
+    {
+      "scope": ["meta.ng-binding.event expression.ng variable.other.readwrite"],
+      "settings": {
+        "foreground": "{{nonPhotoBlue}}"
+      }
+    },
+    {
+      "scope": ["variable.other.constant", "support.variable.property"],
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": "variable.other.readwrite",
+      "settings": {
+        "foreground": "{{nonPhotoBlue}}"
+      }
+    },
+    {
+      "scope": "variable.language",
+      "settings": {
+        "foreground": "{{froly}}"
+      }
+    },
+    {
+      "scope": "variable.scss",
+      "settings": {
+        "foreground": "{{mint}}"
+      }
+    },
+    {
+      "scope": "variable.parameter",
+      "settings": {
+        "foreground": "{{teaGreen}}",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": ["comment", "punctuation.definition.comment"],
+      "settings": {
+        "foreground": "{{nevada}}"
+      }
+    },
+    {
+      "scope": ["source.rust meta.attribute.rust punctuation.definition.attribute.rust"],
+      "settings": {
+        "foreground": "{{pictonBlue}}"
+      }
+    },
+    {
+      "scope": ["source.rust meta.attribute.rust"],
+      "settings": {
+        "foreground": "{{indigo}}"
+      }
+    },
+    {
+      "scope": ["keyword.operator"],
+      "settings": {
+        "foreground": "{{pelorous}}"
+      }
+    },
+    {
+      "scope": ["keyword.operator.new", "keyword.operator.expression"],
+      "settings": {
+        "foreground": "{{softPurple}}"
+      }
+    },
+    {
+      "scope": ["keyword.operator.type", "meta.brace.round", "punctuation.accessor"],
+      "settings": {
+        "foreground": "{{iron}}"
+      }
+    },
+    {
+      "scope": ["keyword.other.unit"],
+      "settings": {
+        "foreground": "{{pelorous}}"
+      }
+    },
+    {
+      "scope": ["meta.brace.round", "punctuation.accessor"],
+      "settings": {
+        "foreground": "{{silverChalice}}"
+      }
+    },
+    {
+      "scope": ["punctuation.definition.template-expression", "punctuation.section.embedded.rust"],
+      "settings": {
+        "foreground": "{{softPurple}}"
+      }
+    },
+    {
+      "scope": ["punctuation.section.embedded.rust"],
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": ["support.type.primitive"],
+      "settings": {
+        "foreground": "{{pistachio}}"
+      }
+    },
+    {
+      "scope": ["support.class.builtin", "meta.block entity.name.type"],
+      "settings": {
+        "foreground": "{{froly}}"
+      }
+    },
+    {
+      "scope": ["meta.class support.class.error"],
+      "settings": {
+        "foreground": "{{froly}}"
+      }
+    },
+    {
+      "scope": "entity.name.tag",
+      "settings": {
+        "foreground": "{{mint}}"
+      }
+    },
+    {
+      "scope": "entity.name.tag support.class.component",
+      "settings": {
+        "foreground": "{{newColor2}}"
+      }
+    },
+    {
+      "scope": ["entity.other.attribute-name", "punctuation.definition.ng-binding-name"],
+      "settings": {
+        "foreground": "{{deYork}}",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "entity.other.attribute-name.id",
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": ["entity.other.attribute-name.class", "punctuation.definition.entity"],
+      "settings": {
+        "foreground": "{{deYork}}"
+      }
+    },
+    {
+      "scope": "meta.at-rule.apply.tailwind entity.other.attribute-name.class",
+      "settings": {
+        "foreground": "{{portage}}"
+      }
+    },
+    {
+      "scope": "entity.other.ng-binding-name",
+      "settings": {
+        "foreground": "{{mint}}"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.string",
+        "string.quoted.double punctuation.definition.block",
+        "text.html.derivative punctuation.definition.block"
+      ],
+      "settings": {
+        "foreground": "{{brown}}"
+      }
+    },
+    {
+      "scope": "support.type.object.module",
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": "support.constant.property-value",
+      "settings": {
+        "foreground": "{{indigo}}"
+      }
+    },
+    {
+      "scope": ["support.constant.font-name", "meta.property-value"],
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": "punctuation",
+      "settings": {
+        "foreground": "{{silverChalice}}"
+      }
+    },
+    {
+      "scope": "punctuation.definition.keyword",
+      "settings": {
+        "foreground": "{{softPurple}}"
+      }
+    },
+    {
+      "scope": "support.type.vendored",
+      "settings": {
+        "foreground": "{{deYork}}"
+      }
+    },
+    {
+      "scope": "constant.character.entity",
+      "settings": {
+        "foreground": "{{indigo}}"
+      }
+    },
+    {
+      "scope": ["source"],
+      "settings": {
+        "foreground": "{{silverChalice}}"
+      }
+    },
+    {
+      "scope": ["source.ini"],
+      "settings": {
+        "foreground": "{{whiskey}}"
+      }
+    },
+    {
+      "scope": ["source.python"],
+      "settings": {
+        "foreground": "{{nonPhotoBlue}}"
+      }
+    },
+    {
+      "scope": ["source.python support.type", "support.function.builtin"],
+      "settings": {
+        "foreground": "{{pelorous}}",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": ["source.python meta.function", "source.python meta.function-call.generic"],
+      "settings": {
+        "foreground": "{{malibu}}"
+      }
+    },
+    {
+      "scope": ["meta.function-call"],
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": ["markup.heading.markdown", "markup.heading entity.name"],
+      "settings": {
+        "foreground": "{{malibu}}"
+      }
+    },
+    {
+      "scope": ["punctuation.definition.heading.markdown"],
+      "settings": {
+        "foreground": "{{fiord}}"
+      }
+    }
+  ]
+}

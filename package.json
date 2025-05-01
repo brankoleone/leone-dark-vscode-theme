@@ -1,7 +1,7 @@
 {
   "name": "leone-dark",
   "icon": "images/icon.png",
-  "displayName": "Leone Dark",
+  "displayName": "Leone Dark Updated",
   "description": "Leone Dark Color Theme based on One Dark Pro",
   "version": "0.2.12",
   "homepage": "https://github.com/brankoleone/leone-dark-vscode-theme.git",
@@ -38,6 +38,11 @@
         "label": "Leone Orca",
         "uiTheme": "vs-dark",
         "path": "./themes/Leone Orca-color-theme.json"
+      },
+      {
+        "label": "Leone Forest",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Leone Forest-color-theme.json"
       }
     ]
   },
@@ -45,9 +50,13 @@
     "publish:patch": "vsce publish patch",
     "publish:minor": "vsce publish minor",
     "publish:major": "vsce publish major",
-    "generate": "node config/index.js generate"
+    "vsix": "vsce package",
+    "generate": "node config/index.js generate",
+    "watch": "node config/index.js watch"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@types/yargs": "^17.0.7",
     "json-beautify": "^1.1.1",
     "json-templates": "^4.2.0",
