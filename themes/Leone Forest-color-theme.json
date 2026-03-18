@@ -386,6 +386,68 @@
     {
       "scope": [ "punctuation.definition.heading.markdown" ],
       "settings": { "foreground": "#455368" }
+    },
+    {
+      "scope": "markup.inline.raw.markdown",
+      "settings": { "foreground": "#D19A66", "fontStyle": "italic" }
+    },
+    {
+      "scope": "markup.inline.raw.string.markdown",
+      "settings": { "foreground": "#D19A66", "fontStyle": "italic" }
+    },
+    {
+      "scope": "punctuation.definition.raw.markdown",
+      "settings": { "foreground": "#D19A66" }
+    },
+    {
+      "scope": "markup.bold,todo.bold",
+      "settings": { "foreground": "#E5C07B", "fontStyle": "bold" }
+    },
+    {
+      "scope": "punctuation.definition.bold.markdown",
+      "settings": { "foreground": "#E5C07B" }
+    },
+    {
+      "scope": [ "markup.italic" ],
+      "settings": { "foreground": "#98C379", "fontStyle": "italic" }
+    },
+    {
+      "scope": "punctuation.definition.italic.markdown",
+      "settings": { "foreground": "#98C379" }
+    },
+    {
+      "scope": "beginning.ordered.list.markdown",
+      "settings": { "foreground": "#4CD1E0" }
+    },
+    { "scope": [ "source.sql" ], "settings": { "foreground": "#A9DEF9" } },
+    {
+      "scope": [
+        "keyword.other.DML.sql",
+        "keyword.other.DDL.sql",
+        "keyword.other.sql",
+        "keyword.reserved.sql"
+      ],
+      "settings": { "foreground": "#C678DD", "fontStyle": "italic" }
+    },
+    {
+      "scope": [ "storage.type.sql" ],
+      "settings": { "foreground": "#6A76DF", "fontStyle": "italic" }
+    },
+    {
+      "scope": [
+        "support.function.aggregate.sql",
+        "support.function.sql",
+        "entity.name.function.sql"
+      ],
+      "settings": { "foreground": "#61AFEF" }
+    },
+    {
+      "scope": [ "variable.other.sql", "variable.parameter.sql" ],
+      "settings": { "foreground": "#99CABB", "fontStyle": "italic" }
+    },
+    {
+      "scope": [ "entity.name.sql", "entity.name.type.sql" ],
+      "settings": { "foreground": "#2EA7B7" }
     }
   ]
 }
