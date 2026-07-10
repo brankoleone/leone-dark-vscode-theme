@@ -88,8 +88,13 @@ yargs
           }
 
           // --- Generate or update the .vsix file ---
+          // Skip packaging when invoked from the standalone packaging script,
+          // which handles vsce itself (avoids double-packaging).
+          if (process.env.SKIP_VSIX === '1') {
+            return;
+          }
           const { exec } = require('child_process');
-          exec('npx vsce package', (error, stdout, stderr) => {
+          exec('npx --yes @vscode/vsce package', (error, stdout, stderr) => {
             if (error) {
               console.error(`Error generating .vsix: ${error.message}`);
               return;

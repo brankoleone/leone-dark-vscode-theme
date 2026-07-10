@@ -51,6 +51,7 @@
     "publish:minor": "vsce publish minor",
     "publish:major": "vsce publish major",
     "vsix": "vsce package",
+    "vsix:theme": "bash scripts/package-theme.sh",
     "generate": "node config/index.js generate",
     "watch": "node config/index.js watch"
   },
