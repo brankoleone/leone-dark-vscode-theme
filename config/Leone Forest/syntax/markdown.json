@@ -1,0 +1,42 @@
+[
+  {
+    "scope": [ "markup.heading.markdown", "markup.heading entity.name" ],
+    "settings": { "foreground": "{{malibu}}" }
+  },
+  {
+    "scope": [ "punctuation.definition.heading.markdown" ],
+    "settings": { "foreground": "{{fiord}}" }
+  },
+  {
+    "scope": "markup.inline.raw.markdown",
+    "settings": { "foreground": "{{whiskey}}", "fontStyle": "italic" }
+  },
+  {
+    "scope": "markup.inline.raw.string.markdown",
+    "settings": { "foreground": "{{whiskey}}", "fontStyle": "italic" }
+  },
+  {
+    "scope": "punctuation.definition.raw.markdown",
+    "settings": { "foreground": "{{whiskey}}" }
+  },
+  {
+    "scope": "markup.bold,todo.bold",
+    "settings": { "foreground": "{{chalky}}", "fontStyle": "bold" }
+  },
+  {
+    "scope": "punctuation.definition.bold.markdown",
+    "settings": { "foreground": "{{chalky}}" }
+  },
+  {
+    "scope": [ "markup.italic" ],
+    "settings": { "foreground": "{{pistachio}}", "fontStyle": "italic" }
+  },
+  {
+    "scope": "punctuation.definition.italic.markdown",
+    "settings": { "foreground": "{{pistachio}}" }
+  },
+  {
+    "scope": "beginning.ordered.list.markdown",
+    "settings": { "foreground": "{{turquoise}}" }
+  }
+]

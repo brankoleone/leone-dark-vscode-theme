@@ -6,7 +6,29 @@ const { hideBin } = require('yargs/helpers');
 
 const paletteFileName = 'palette.json';
 const templateFileName = 'template.json';
+const syntaxDirName = 'syntax';
 const outputThemesDir = 'themes/';
+
+// Build the full theme template object by merging the base template.json with
+// any per-file-type rule files under config/<theme>/syntax/*.json. Each syntax
+// file is a JSON array of tokenColors rules; they are appended (sorted by
+// filename) onto the base tokenColors before placeholders are resolved.
+function buildTemplate(themeDir) {
+  const template = JSON.parse(fs.readFileSync(`${themeDir}/${templateFileName}`, 'utf8'));
+  const syntaxDir = `${themeDir}/${syntaxDirName}`;
+  if (fs.existsSync(syntaxDir)) {
+    if (!Array.isArray(template.tokenColors)) template.tokenColors = [];
+    const files = fs
+      .readdirSync(syntaxDir)
+      .filter((f) => f.endsWith('.json'))
+      .sort();
+    for (const file of files) {
+      const rules = JSON.parse(fs.readFileSync(`${syntaxDir}/${file}`, 'utf8'));
+      template.tokenColors = template.tokenColors.concat(rules);
+    }
+  }
+  return template;
+}
 
 yargs
   .scriptName('vscode-theme')
@@ -22,11 +44,9 @@ yargs
       });
     },
     function (argv) {
-      const paletteFile = `config/${argv.themeName}/${paletteFileName}`;
-      const templateFile = `config/${argv.themeName}/${templateFileName}`;
+      const themeDir = `config/${argv.themeName}`;
+      const paletteFile = `${themeDir}/${paletteFileName}`;
       const themeFile = `${outputThemesDir}/${argv.themeName}-color-theme.json`;
-
-      const templateRawData = fs.readFileSync(templateFile, 'utf8');
 
       let configFileData = null;
 
@@ -42,7 +62,7 @@ yargs
       if (configFileData) {
         const config = JSON.parse(configFileData);
 
-        const template = parse(JSON.parse(templateRawData));
+        const template = parse(buildTemplate(themeDir));
         const output = beautify(template(config), null, 2, 80);
 
         fs.writeFile(themeFile, output, (err) => {
@@ -119,24 +139,24 @@ yargs
       });
     },
     function (argv) {
-      const paletteFile = `config/${argv.themeName}/${paletteFileName}`;
-      const templateFile = `config/${argv.themeName}/${templateFileName}`;
+      const themeDir = `config/${argv.themeName}`;
+      const paletteFile = `${themeDir}/${paletteFileName}`;
+      const templateFile = `${themeDir}/${templateFileName}`;
+      const syntaxDir = `${themeDir}/${syntaxDirName}`;
       const themeFile = `${outputThemesDir}/${argv.themeName}-color-theme.json`;
 
       function generateTheme() {
         let configFileData = null;
-        let templateRawData = null;
         try {
           configFileData = fs.readFileSync(paletteFile, 'utf-8');
-          templateRawData = fs.readFileSync(templateFile, 'utf8');
         } catch (err) {
           if (err.code !== 'ENOENT') throw err;
           console.log(`There's no such config file: ${err.path}`);
           return;
         }
-        if (configFileData && templateRawData) {
+        if (configFileData) {
           const config = JSON.parse(configFileData);
-          const template = parse(JSON.parse(templateRawData));
+          const template = parse(buildTemplate(themeDir));
           const output = beautify(template(config), null, 2, 80);
           fs.writeFile(themeFile, output, (err) => {
             if (err) throw err;
@@ -145,7 +165,7 @@ yargs
         }
       }
 
-      console.log(`Watching for changes in ${paletteFile} and ${templateFile}...`);
+      console.log(`Watching for changes in ${paletteFile}, ${templateFile} and ${syntaxDir}/...`);
       generateTheme();
 
       fs.watch(paletteFile, { persistent: true }, (eventType) => {
@@ -158,6 +178,11 @@ yargs
           generateTheme();
         }
       });
+      if (fs.existsSync(syntaxDir)) {
+        fs.watch(syntaxDir, { persistent: true }, () => {
+          generateTheme();
+        });
+      }
     }
   )
   .help()

@@ -362,7 +362,19 @@
       "settings": { "foreground": "#6A76DF" }
     },
     { "scope": [ "source" ], "settings": { "foreground": "#ABABAB" } },
+    {
+      "scope": [ "meta.function-call" ],
+      "settings": { "foreground": "#E5C07B" }
+    },
     { "scope": [ "source.ini" ], "settings": { "foreground": "#D19A66" } },
+    {
+      "scope": [ "markup.heading.markdown", "markup.heading entity.name" ],
+      "settings": { "foreground": "#61AFEF" }
+    },
+    {
+      "scope": [ "punctuation.definition.heading.markdown" ],
+      "settings": { "foreground": "#455368" }
+    },
     { "scope": [ "source.python" ], "settings": { "foreground": "#A9DEF9" } },
     {
       "scope": [ "source.python support.type", "support.function.builtin" ],
@@ -374,18 +386,6 @@
         "source.python meta.function-call.generic"
       ],
       "settings": { "foreground": "#61AFEF" }
-    },
-    {
-      "scope": [ "meta.function-call" ],
-      "settings": { "foreground": "#E5C07B" }
-    },
-    {
-      "scope": [ "markup.heading.markdown", "markup.heading entity.name" ],
-      "settings": { "foreground": "#61AFEF" }
-    },
-    {
-      "scope": [ "punctuation.definition.heading.markdown" ],
-      "settings": { "foreground": "#455368" }
     }
   ]
 }

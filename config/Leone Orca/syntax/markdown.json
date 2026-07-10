@@ -1,0 +1,10 @@
+[
+  {
+    "scope": [ "markup.heading.markdown", "markup.heading entity.name" ],
+    "settings": { "foreground": "{{malibu}}" }
+  },
+  {
+    "scope": [ "punctuation.definition.heading.markdown" ],
+    "settings": { "foreground": "{{fiord}}" }
+  }
+]
