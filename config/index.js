@@ -9,6 +9,65 @@ const templateFileName = 'template.json';
 const syntaxDirName = 'syntax';
 const outputThemesDir = 'themes/';
 
+// Neovim output: an optional per-theme `nvim/` config folder generates a Lua
+// colorscheme (config/<theme>/nvim/template.lua, with {{colorName}} palette
+// placeholders) plus static Treesitter query overrides (config/<theme>/nvim/
+// queries/**). Only themes that ship an nvim/ folder produce Neovim output.
+const nvimSrcDirName = 'nvim';
+const nvimTemplateFileName = 'template.lua';
+const nvimQueriesDirName = 'queries';
+const outputNvimColorsDir = 'nvim/colors';
+const outputNvimQueriesDir = 'nvim/after/queries';
+
+// "Leone Forest" -> "leone-forest" (matches vim.g.colors_name in the template).
+function themeSlug(themeName) {
+  return themeName
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function copyDirRecursive(src, dest) {
+  fs.mkdirSync(dest, { recursive: true });
+  for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    const from = `${src}/${entry.name}`;
+    const to = `${dest}/${entry.name}`;
+    if (entry.isDirectory()) copyDirRecursive(from, to);
+    else fs.copyFileSync(from, to);
+  }
+}
+
+// Generate the Neovim colorscheme + queries for a theme, if it has an nvim/
+// source folder. Returns true when nvim output was produced.
+function generateNvim(themeName, config) {
+  const nvimDir = `config/${themeName}/${nvimSrcDirName}`;
+  if (!fs.existsSync(nvimDir)) return false;
+  const slug = themeSlug(themeName);
+
+  // 1) Colorscheme: resolve {{palette}} placeholders in the Lua template.
+  const templateLua = `${nvimDir}/${nvimTemplateFileName}`;
+  if (fs.existsSync(templateLua)) {
+    const raw = fs.readFileSync(templateLua, 'utf8');
+    const resolved = raw.replace(/\{\{(\w+)\}\}/g, (match, key) => {
+      if (Object.prototype.hasOwnProperty.call(config, key)) return config[key];
+      console.warn(`[nvim] Unknown palette key {{${key}}} in ${templateLua}`);
+      return match;
+    });
+    fs.mkdirSync(outputNvimColorsDir, { recursive: true });
+    const outFile = `${outputNvimColorsDir}/${slug}.lua`;
+    fs.writeFileSync(outFile, resolved);
+    console.log(`[nvim] Colorscheme generated: ${outFile}`);
+  }
+
+  // 2) Treesitter queries: copied verbatim into after/queries (theme-agnostic).
+  const queriesSrc = `${nvimDir}/${nvimQueriesDirName}`;
+  if (fs.existsSync(queriesSrc)) {
+    copyDirRecursive(queriesSrc, outputNvimQueriesDir);
+    console.log(`[nvim] Treesitter queries copied into: ${outputNvimQueriesDir}/`);
+  }
+  return true;
+}
+
 // Build the full theme template object by merging the base template.json with
 // any per-file-type rule files under config/<theme>/syntax/*.json. Each syntax
 // file is a JSON array of tokenColors rules; they are appended (sorted by
@@ -62,6 +121,9 @@ yargs
       if (configFileData) {
         const config = JSON.parse(configFileData);
 
+        // Neovim colorscheme + queries (no-op unless the theme has an nvim/ folder).
+        generateNvim(argv.themeName, config);
+
         const template = parse(buildTemplate(themeDir));
         const output = beautify(template(config), null, 2, 80);
 
@@ -114,7 +176,7 @@ yargs
             return;
           }
           const { exec } = require('child_process');
-          exec('npx --yes @vscode/vsce package', (error, stdout, stderr) => {
+          exec('pnpm dlx @vscode/vsce package', (error, stdout, stderr) => {
             if (error) {
               console.error(`Error generating .vsix: ${error.message}`);
               return;
@@ -156,6 +218,7 @@ yargs
         }
         if (configFileData) {
           const config = JSON.parse(configFileData);
+          generateNvim(argv.themeName, config);
           const template = parse(buildTemplate(themeDir));
           const output = beautify(template(config), null, 2, 80);
           fs.writeFile(themeFile, output, (err) => {
@@ -180,6 +243,12 @@ yargs
       });
       if (fs.existsSync(syntaxDir)) {
         fs.watch(syntaxDir, { persistent: true }, () => {
+          generateTheme();
+        });
+      }
+      const nvimDir = `${themeDir}/${nvimSrcDirName}`;
+      if (fs.existsSync(nvimDir)) {
+        fs.watch(nvimDir, { persistent: true, recursive: true }, () => {
           generateTheme();
         });
       }
