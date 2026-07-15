@@ -1,5 +1,5 @@
-# LeOne Dark Theme
-VSCode Color Theme based on [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme) theme
+# Leone Dark Theme
+A dark VS Code color theme.
 
 ## This is how it looks like in an angular component (.ts):
 

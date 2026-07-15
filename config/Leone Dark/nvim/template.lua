@@ -1,7 +1,7 @@
--- leone-forest.lua — GENERATED FILE, DO NOT EDIT.
--- Source template: config/Leone Forest/nvim/template.lua
--- Regenerate with: npm run generate -- --themeName "Leone Forest"
--- Double-brace placeholders are resolved from config/Leone Forest/palette.json.
+-- leone-dark.lua — GENERATED FILE, DO NOT EDIT.
+-- Source template: config/Leone Dark/nvim/template.lua
+-- Regenerate with: pnpm generate "Leone Dark"
+-- Double-brace placeholders are resolved from config/Leone Dark/palette.json.
 
 local M = {}
 
@@ -57,7 +57,7 @@ function M.setup()
   end
   vim.o.termguicolors = true
   vim.o.background = "dark"
-  vim.g.colors_name = "leone-forest"
+  vim.g.colors_name = "leone-dark"
 
   local function hi(group, spec)
     vim.api.nvim_set_hl(0, group, spec)

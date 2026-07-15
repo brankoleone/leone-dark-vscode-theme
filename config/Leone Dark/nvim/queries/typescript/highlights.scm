@@ -1,5 +1,5 @@
 ; extends
-; Leone Forest — TypeScript refinements
+; Leone Dark — TypeScript refinements
 ; Splits a few captures the default queries lump together, so the Treesitter
 ; output matches the VS Code theme's TextMate scopes exactly.
 

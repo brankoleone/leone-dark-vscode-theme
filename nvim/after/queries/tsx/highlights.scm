@@ -1,5 +1,5 @@
 ; extends
-; Leone Forest — TSX refinements
+; Leone Dark — TSX refinements
 ; TSX does not inherit the typescript *after* queries, so the same refinements
 ; are repeated here. JSX component vs. intrinsic-tag coloring is already handled
 ; by the bundled jsx query (@tag vs. @tag.builtin) + the colorscheme.

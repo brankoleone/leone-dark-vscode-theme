@@ -3,15 +3,15 @@
 # Generate a selected theme and build its .vsix package — no global vsce required.
 #
 # Usage:
-#   scripts/package-theme.sh                 # defaults to "Leone Forest"
-#   scripts/package-theme.sh "Leone Orca"    # any theme with a config/<name>/ folder
+#   scripts/package-theme.sh                 # defaults to "Leone Dark"
+#   scripts/package-theme.sh "<Theme Name>"  # any theme with a config/<name>/ folder
 #
 # vsce is resolved on demand via `pnpm dlx @vscode/vsce`, so nothing needs to be
 # installed globally.
 
 set -euo pipefail
 
-THEME="${1:-Leone Forest}"
+THEME="${1:-Leone Dark}"
 
 # Resolve repo root regardless of where the script is called from.
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"

@@ -19,7 +19,7 @@ const nvimQueriesDirName = 'queries';
 const outputNvimColorsDir = 'nvim/colors';
 const outputNvimQueriesDir = 'nvim/after/queries';
 
-// "Leone Forest" -> "leone-forest" (matches vim.g.colors_name in the template).
+// "Leone Dark" -> "leone-dark" (matches vim.g.colors_name in the template).
 function themeSlug(themeName) {
   return themeName
     .toLowerCase()
@@ -98,7 +98,7 @@ yargs
     (yargs) => {
       yargs.positional('themeName', {
         type: 'string',
-        default: 'Leone Craft',
+        default: 'Leone Dark',
         describe: 'the theme name to be generated'
       });
     },
@@ -196,7 +196,7 @@ yargs
     (yargs) => {
       yargs.positional('themeName', {
         type: 'string',
-        default: 'Leone Craft',
+        default: 'Leone Dark',
         describe: 'the theme name to be watched'
       });
     },

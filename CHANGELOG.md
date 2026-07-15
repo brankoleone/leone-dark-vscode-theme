@@ -6,7 +6,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Initial release
+- **Breaking:** removed the Leone Craft, Leone Orca, and original Leone Dark themes. Leone Forest has been renamed to Leone Dark and is now the only theme in the extension.
 
 ## [0.2.15]
 

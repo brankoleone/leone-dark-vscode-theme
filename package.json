@@ -1,8 +1,8 @@
 {
   "name": "leone-dark",
   "icon": "images/icon.png",
-  "displayName": "Leone Dark Updated",
-  "description": "Leone Dark Color Theme based on One Dark Pro",
+  "displayName": "Leone Dark",
+  "description": "Leone Dark - a UI color theme for VS Code based IDEs",
   "version": "0.2.15",
   "license": "MIT",
   "homepage": "https://github.com/brankoleone/leone-dark-vscode-theme.git",
@@ -18,7 +18,6 @@
     "Themes"
   ],
   "keywords": [
-    "One Dark",
     "Dark Theme",
     "Leone",
     "Leone Dark"
@@ -29,21 +28,6 @@
         "label": "Leone Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/Leone Dark-color-theme.json"
-      },
-      {
-        "label": "Leone Craft",
-        "uiTheme": "vs-dark",
-        "path": "./themes/Leone Craft-color-theme.json"
-      },
-      {
-        "label": "Leone Orca",
-        "uiTheme": "vs-dark",
-        "path": "./themes/Leone Orca-color-theme.json"
-      },
-      {
-        "label": "Leone Forest",
-        "uiTheme": "vs-dark",
-        "path": "./themes/Leone Forest-color-theme.json"
       }
     ]
   },

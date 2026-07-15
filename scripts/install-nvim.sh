@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Copy the generated Neovim theme (colorscheme + Treesitter query overrides)
-# into your Neovim config so :colorscheme leone-forest works.
+# into your Neovim config so :colorscheme leone-dark works.
 #
 # Destination: $NVIM_CONFIG_DIR, else $XDG_CONFIG_HOME/nvim, else ~/.config/nvim
 #
@@ -17,7 +17,7 @@ DEST="${NVIM_CONFIG_DIR:-${XDG_CONFIG_HOME:-$HOME/.config}/nvim}"
 
 if [ ! -d "$SRC/colors" ]; then
   echo "No generated Neovim theme found at $SRC/colors."
-  echo "Run: pnpm generate -- --themeName \"Leone Forest\""
+  echo "Run: pnpm generate \"Leone Dark\""
   exit 1
 fi
 
@@ -47,4 +47,4 @@ if [ -d "$SRC/after/queries" ]; then
   done < <(find "$SRC/after/queries" -type f -print0)
 fi
 
-echo "Done. Restart Neovim, then :colorscheme leone-forest"
+echo "Done. Restart Neovim, then :colorscheme leone-dark"
