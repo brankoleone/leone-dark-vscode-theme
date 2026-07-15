@@ -7,7 +7,7 @@ const { hideBin } = require('yargs/helpers');
 const paletteFileName = 'palette.json';
 const templateFileName = 'template.json';
 const syntaxDirName = 'syntax';
-const outputThemesDir = 'themes/';
+const outputThemesDir = 'themes';
 
 // Neovim output: an optional per-theme `nvim/` config folder generates a Lua
 // colorscheme (config/<theme>/nvim/template.lua, with {{colorName}} palette
@@ -127,6 +127,7 @@ yargs
         const template = parse(buildTemplate(themeDir));
         const output = beautify(template(config), null, 2, 80);
 
+        fs.mkdirSync(outputThemesDir, { recursive: true });
         fs.writeFile(themeFile, output, (err) => {
           if (err) throw err;
           console.log(`Theme '${argv.themeName}' successfully generated into file: ${themeFile}`);
@@ -221,6 +222,7 @@ yargs
           generateNvim(argv.themeName, config);
           const template = parse(buildTemplate(themeDir));
           const output = beautify(template(config), null, 2, 80);
+          fs.mkdirSync(outputThemesDir, { recursive: true });
           fs.writeFile(themeFile, output, (err) => {
             if (err) throw err;
             console.log(`[WATCH] Theme '${argv.themeName}' regenerated: ${themeFile}`);
