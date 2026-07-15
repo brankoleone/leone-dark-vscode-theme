@@ -47,14 +47,16 @@
       }
     ]
   },
+  "packageManager": "pnpm@11.12.0",
   "scripts": {
-    "publish:patch": "vsce publish patch",
-    "publish:minor": "vsce publish minor",
-    "publish:major": "vsce publish major",
-    "vsix": "vsce package",
+    "publish:patch": "pnpm dlx @vscode/vsce publish patch",
+    "publish:minor": "pnpm dlx @vscode/vsce publish minor",
+    "publish:major": "pnpm dlx @vscode/vsce publish major",
+    "vsix": "pnpm dlx @vscode/vsce package",
     "vsix:theme": "bash scripts/package-theme.sh",
     "generate": "node config/index.js generate",
-    "watch": "node config/index.js watch"
+    "watch": "node config/index.js watch",
+    "nvim:install": "bash scripts/install-nvim.sh"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",

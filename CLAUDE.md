@@ -4,21 +4,29 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Commands
 
-```bash
-# Generate a theme from its config files (palette + template)
-npm run generate -- --themeName "Leone Forest"
-npm run generate -- --themeName "Leone Orca"
+This project uses **pnpm** (see `packageManager` in `package.json`). Install deps with `pnpm install`.
 
-# Watch palette/template files and auto-regenerate on change
-npm run watch -- --themeName "Leone Forest"
+```bash
+# Generate a theme from its config files (palette + template).
+# For themes with a config/<name>/nvim/ folder (e.g. Leone Forest), this also
+# emits the Neovim colorscheme + Treesitter queries under nvim/.
+# (Theme name is a positional arg — pnpm forwards `--` literally, so prefer this form.)
+pnpm generate "Leone Forest"
+pnpm generate "Leone Orca"
+
+# Watch palette/template/syntax/nvim files and auto-regenerate on change
+pnpm watch "Leone Forest"
 
 # Package the extension as a .vsix file
-npm run vsix
+pnpm vsix
+
+# Copy the generated Neovim theme into your Neovim config
+pnpm nvim:install
 
 # Publish to VS Code Marketplace
-npm run publish:patch   # bump patch version
-npm run publish:minor   # bump minor version
-npm run publish:major   # bump major version
+pnpm publish:patch   # bump patch version
+pnpm publish:minor   # bump minor version
+pnpm publish:major   # bump major version
 ```
 
 ## Architecture
@@ -39,4 +47,4 @@ The generator (`config/index.js`) reads the palette and template, appends every 
 
 ### Workflow for template-based themes
 
-To change a color: edit `palette.json`, `template.json`, or the relevant `syntax/<fileType>.json` in the `config/<ThemeName>/` folder, then run `npm run generate -- --themeName "<ThemeName>"`. The file in `themes/` will be overwritten. Add syntax coloring for a new file type by creating a new `syntax/<fileType>.json` array.
+To change a color: edit `palette.json`, `template.json`, or the relevant `syntax/<fileType>.json` in the `config/<ThemeName>/` folder, then run `pnpm generate "<ThemeName>"`. The file in `themes/` will be overwritten. Add syntax coloring for a new file type by creating a new `syntax/<fileType>.json` array.
