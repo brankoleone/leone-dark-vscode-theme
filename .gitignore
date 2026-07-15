@@ -2,6 +2,10 @@
 node_modules
 logo
 
+# Generated Neovim colorscheme output (produced by `pnpm generate`/`watch`;
+# source lives in config/<Theme>/nvim/, which stays tracked).
+/nvim/
+
 # Files
 *.vsix
 WORKFLOW.md

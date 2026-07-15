@@ -35,9 +35,11 @@ This extension provides a single VS Code dark theme: **Leone Dark**. It uses a c
 - `config/Leone Dark/template.json` — base VS Code theme JSON (UI `colors`, semantic tokens, and language-agnostic `tokenColors`) with `{{colorName}}` placeholders (from `json-templates`)
 - `config/Leone Dark/syntax/<fileType>.json` — per-file-type syntax rules, each a JSON **array** of `tokenColors` entries (e.g. `makefile.json`, `sql.json`, `markdown.json`, `python.json`, `ini.json`). Also use `{{colorName}}` placeholders.
 - `config/Leone Dark/nvim/` — Neovim output: `template.lua` (colorscheme, with `{{colorName}}` placeholders) and `queries/` (static Treesitter query overrides, copied verbatim).
-- `themes/Leone Dark-color-theme.json` — **generated output; do not edit manually**
+- `themes/Leone Dark-color-theme.json` — **generated output; do not edit manually**. This one is tracked in git since it's the extension's actual shipped/versioned deliverable.
 
 The generator (`config/index.js`) reads the palette and template, appends every `syntax/*.json` array (sorted by filename) onto the base `tokenColors`, resolves placeholders, writes the theme file, emits the Neovim colorscheme + Treesitter queries under `nvim/`, updates `package.json`'s `contributes.themes`, and re-packages the `.vsix`. Because each syntax file targets a distinct language (disjoint scopes), their append order does not affect the result.
+
+The root-level `nvim/` output (unlike `themes/`) is git-ignored — it's a local convenience artifact for `pnpm nvim:install`, regenerated on demand by `generate`/`watch`, not something the repo ships or versions. Run `pnpm generate "Leone Dark"` at least once before `pnpm nvim:install` if `nvim/` doesn't exist yet.
 
 ### Workflow
 
