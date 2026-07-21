@@ -125,7 +125,9 @@ yargs
         generateNvim(argv.themeName, config);
 
         const template = parse(buildTemplate(themeDir));
-        const output = beautify(template(config), null, 2, 80);
+        const resolved = template(config);
+        const output = beautify(resolved, null, 2, 80);
+        const uiTheme = resolved.type === 'light' ? 'vs' : 'vs-dark';
 
         fs.mkdirSync(outputThemesDir, { recursive: true });
         fs.writeFile(themeFile, output, (err) => {
@@ -159,7 +161,7 @@ yargs
           if (!exists) {
             pkg.contributes.themes.push({
               label: themeLabel,
-              uiTheme: 'vs-dark',
+              uiTheme,
               path: themePath
             });
             try {

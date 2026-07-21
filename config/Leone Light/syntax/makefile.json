@@ -1,0 +1,50 @@
+[
+  {
+    "scope": [ "source.makefile" ],
+    "settings": { "foreground": "{{nonPhotoBlue}}" }
+  },
+  {
+    "scope": [
+      "keyword.control.makefile",
+      "keyword.control.ifeq.makefile",
+      "keyword.control.ifneq.makefile",
+      "keyword.control.ifdef.makefile",
+      "keyword.control.ifndef.makefile",
+      "keyword.control.else.makefile",
+      "keyword.control.endif.makefile",
+      "keyword.other.makefile"
+    ],
+    "settings": { "foreground": "{{softPurple}}", "fontStyle": "italic" }
+  },
+  {
+    "scope": [
+      "variable.language.makefile",
+      "punctuation.definition.variable.makefile"
+    ],
+    "settings": { "foreground": "{{indigo}}", "fontStyle": "italic" }
+  },
+  {
+    "scope": [
+      "support.function.target.PHONY.makefile",
+      "support.function.makefile",
+      "meta.scope.function-call.makefile support.function.builtin.makefile"
+    ],
+    "settings": { "foreground": "{{malibu}}" }
+  },
+  {
+    "scope": [
+      "variable.other.makefile",
+      "variable.parameter.makefile",
+      "string.interpolated.dollar.makefile"
+    ],
+    "settings": { "foreground": "{{teaGreen}}", "fontStyle": "italic" }
+  },
+  {
+    "scope": [
+      "entity.name.function.target.makefile",
+      "meta.scope.target.makefile entity.name.function.target.makefile",
+      "meta.scope.prerequisites.makefile"
+    ],
+    "settings": { "foreground": "{{pelorous}}" }
+  }
+]

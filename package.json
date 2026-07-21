@@ -11,23 +11,20 @@
     "type": "git"
   },
   "publisher": "brankoleone",
-  "engines": {
-    "vscode": "^1.51.0"
-  },
-  "categories": [
-    "Themes"
-  ],
-  "keywords": [
-    "Dark Theme",
-    "Leone",
-    "Leone Dark"
-  ],
+  "engines": { "vscode": "^1.51.0" },
+  "categories": [ "Themes" ],
+  "keywords": [ "Dark Theme", "Leone", "Leone Dark" ],
   "contributes": {
     "themes": [
       {
         "label": "Leone Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/Leone Dark-color-theme.json"
+      },
+      {
+        "label": "Leone Light",
+        "uiTheme": "vs",
+        "path": "./themes/Leone Light-color-theme.json"
       }
     ]
   },

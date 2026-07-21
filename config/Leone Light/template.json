@@ -1,0 +1,525 @@
+{
+  "name": "{{name}}",
+  "type": "light",
+  "colors": {
+    "activityBar.background": "{{midnightExpress}}",
+    "activityBar.foreground": "{{silverChalice}}",
+    "activityBarBadge.background": "{{pictonBlue}}",
+    "activityBarBadge.foreground": "#FFFFFF",
+    "activityBar.activeBackground": "#DCE6F7",
+    "activityBar.activeBorder": "{{pictonBlue}}",
+    "activityBar.inactiveForeground": "{{silverChalice}}",
+
+    "button.background": "{{chambray}}",
+    "button.foreground": "#F2F5FA",
+    "button.secondaryBackground": "#E1E4EA",
+    "button.secondaryForeground": "{{silverChalice}}",
+
+    "debugToolBar.background": "{{blackPearl}}",
+    "diffEditor.insertedTextBackground": "#12707E2E",
+    "dropdown.background": "#F5F6F8",
+    "dropdown.border": "#CBD1DB",
+
+    "editor.foreground": "{{silverChalice}}",
+    "editor.background": "{{blackPearl}}",
+
+    "editor.wordHighlightBackground": "#00000000",
+    "editor.wordHighlightBorder": "{{fiord}}",
+    "editor.wordHighlightStrongBackground": "#00000000",
+    "editor.wordHighlightStrongBorder": "{{pictonBlue}}",
+
+    "editor.lineHighlightBackground": "{{blackRock}}",
+
+    "editor.findMatchBackground": "#FFB65C77",
+    "editor.findMatchBorder": "{{chalky}}",
+    "editor.findMatchHighlightBackground": "#FFE39955",
+    "editor.findMatchHighlightBorder": "{{whiskey}}",
+
+    "editorInlayHint.foreground": "{{nevada}}",
+    "editorInlayHint.background": "#C7D0DE66",
+
+    "editorBracketMatch.background": "#C7D0DE80",
+    "editorBracketMatch.border": "#8FA0C0",
+    "editorCursor.background": "#FFFFFFC9",
+    "editorCursor.foreground": "#1D6FE0",
+    "editorError.foreground": "#D3312F",
+
+    "editorGroup.dropBackground": "#00000030",
+    "editorGroup.emptyBackground": "{{mirage}}",
+    "editorGroup.border": "{{mirage}}",
+    "editorGroupHeader.tabsBackground": "#F3F4F7",
+
+    "editorHoverWidget.background": "{{blackPearl}}",
+    "editorHoverWidget.border": "{{mirage}}",
+    "editorIndentGuide.activeBackground1": "#4B516255",
+    "editorIndentGuide.background1": "{{blackRock}}",
+    "editorLineNumber.activeForeground": "{{chambray}}",
+    "editorLineNumber.foreground": "{{nevada}}",
+    "editorMarkerNavigation.background": "{{blackPearl}}",
+    "editorRuler.foreground": "#4B516230",
+    "editorSuggestWidget.background": "{{blackPearl}}",
+    "editorSuggestWidget.border": "{{mirage}}",
+    "editorSuggestWidget.selectedBackground": "{{fiord}}",
+    "editorWarning.foreground": "{{whiskey}}",
+    "editorWhitespace.foreground": "#00000030",
+    "editorWidget.background": "{{blackPearl}}",
+
+    "editor.selectionBackground": "{{fiord}}",
+    "editor.selectionForeground": "#F0F",
+    "editor.selectionHighlightBorder": "#00000000",
+    "editor.selectionHighlightBackground": "{{blackRock}}",
+
+    "focusBorder": "{{malibu}}",
+
+    "input.background": "{{blackRock}}",
+    "inputOption.activeForeground": "{{pictonBlue}}",
+
+    "list.activeSelectionBackground": "{{fiord}}",
+    "list.activeSelectionForeground": "{{silverChalice}}",
+    "list.focusBackground": "{{fiord}}",
+    "list.focusForeground": "{{silverChalice}}",
+    "list.highlightForeground": "{{pictonBlue}}",
+    "list.hoverBackground": "{{blackRock}}",
+    "list.hoverForeground": "{{silverChalice}}",
+    "list.inactiveSelectionBackground": "{{midnightExpress}}",
+    "list.inactiveSelectionForeground": "{{silverChalice}}",
+    "list.warningForeground": "{{whiskey}}",
+
+    "menu.foreground": "{{silverChalice}}",
+    "panelSectionHeader.background": "{{blackRock}}",
+    "peekViewEditor.background": "#F5F6F8",
+    "peekViewEditor.matchHighlightBackground": "#9A3FBF33",
+    "peekViewResult.background": "{{midnightExpress}}",
+    "scrollbarSlider.activeBackground": "#4B516280",
+    "scrollbarSlider.background": "#4B516240",
+    "scrollbarSlider.hoverBackground": "#4B516260",
+
+    "gitDecoration.ignoredResourceForeground": "#A0A6B3",
+    "gitDecoration.modifiedResourceForeground": "{{malibu}}",
+    "gitDecoration.deletedResourceForeground": "{{watermelon}}",
+    "gitDecoration.untrackedResourceForeground": "{{deYork}}",
+    "editorGutter.addedBackground": "{{mint}}",
+    "editorGutter.modifiedBackground": "{{nonPhotoBlue}}",
+    "editorGutter.deletedBackground": "{{froly}}",
+
+    "sideBar.background": "#F3F4F7",
+    "sideBar.foreground": "{{nevada}}",
+    "sideBar.border": "{{mirage}}",
+    "sideBarSectionHeader.background": "{{blackRock}}",
+    "sideBarSectionHeader.border": "{{mirage}}",
+
+    "statusBar.background": "{{chambray}}",
+    "statusBar.debuggingBackground": "{{mint}}",
+    "statusBar.debuggingForeground": "#000000",
+    "statusBar.debuggingBorder": "#215B54",
+    "statusBar.foreground": "#F2F5FA",
+    "statusBar.noFolderBackground": "{{iron}}",
+    "statusBarItem.hoverBackground": "#35507A",
+    "statusBarItem.remoteBackground": "#4D78CC",
+    "statusBarItem.remoteForeground": "#F8FAFD",
+
+    "sash.hoverBorder": "{{chambray}}",
+
+    "tab.activeBackground": "{{blackPearl}}",
+    "tab.activeForeground": "{{silverChalice}}",
+    "tab.border": "{{mirage}}",
+    "tab.activeBorderTop": "{{pictonBlue}}",
+    "tab.hoverBackground": "{{blackRock}}",
+    "tab.inactiveBackground": "{{midnightExpress}}",
+    "tab.unfocusedHoverBackground": "{{midnightExpress}}",
+
+    "terminal.ansiBrightBlack": "{{iron}}",
+    "terminal.ansiBrightBlue": "{{pictonBlue}}",
+    "terminal.ansiBrightCyan": "{{turquoise}}",
+    "terminal.ansiBrightGreen": "{{pistachio}}",
+    "terminal.ansiBrightMagenta": "{{newColor}}",
+    "terminal.ansiBrightRed": "{{watermelon}}",
+    "terminal.ansiBrightWhite": "{{fiord}}",
+    "terminal.ansiBrightYellow": "{{whiskey}}",
+    "terminal.ansiBlack": "{{silverChalice}}",
+    "terminal.ansiBlue": "{{malibu}}",
+    "terminal.ansiCyan": "{{fountainBlue}}",
+    "terminal.ansiGreen": "{{mint}}",
+    "terminal.ansiMagenta": "{{softPurple}}",
+    "terminal.ansiRed": "{{froly}}",
+    "terminal.ansiWhite": "{{nevada}}",
+    "terminal.ansiYellow": "{{chalky}}",
+    "terminal.background": "{{blackPearl}}",
+    "terminal.border": "{{mirage}}",
+    "terminal.foreground": "{{silverChalice}}",
+    "terminal.selectionBackground": "#4B516230",
+    "textLink.foreground": "{{malibu}}",
+
+    "titleBar.activeBackground": "{{midnightExpress}}",
+    "titleBar.activeForeground": "{{silverChalice}}",
+    "titleBar.inactiveBackground": "{{blackRock}}",
+    "titleBar.inactiveForeground": "{{nevada}}"
+  },
+  "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "enumMember": {
+      "foreground": "{{nonPhotoBlue}}"
+    },
+    "variable.constant": {
+      "foreground": "{{whiskey}}"
+    },
+    "variable.defaultLibrary": {
+      "foreground": "{{froly}}"
+    }
+  },
+  "tokenColors": [
+    {
+      "scope": ["source.ignore", "keyword.other.definition"],
+      "settings": {
+        "foreground": "{{nonPhotoBlue}}"
+      }
+    },
+    {
+      "scope": ["storage", "storage.type"],
+      "settings": {
+        "foreground": "{{indigo}}",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": ["keyword.control"],
+      "settings": {
+        "foreground": "{{softPurple}}",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "string",
+      "settings": {
+        "foreground": "{{whiskey}}",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "string.regexp",
+      "settings": {
+        "foreground": "{{fountainBlue}}"
+      }
+    },
+    {
+      "scope": ["entity.name.function"],
+      "settings": {
+        "foreground": "{{malibu}}"
+      }
+    },
+    {
+      "scope": ["entity.name.namespace", "entity.name.type.module"],
+      "settings": {
+        "foreground": "{{deYork}}"
+      }
+    },
+    {
+      "scope": ["support.function"],
+      "settings": {
+        "foreground": "{{malibu}}"
+      }
+    },
+    {
+      "scope": [
+        "meta.class entity.name.type.class",
+        "meta.class entity.name.function",
+        "new.expr entity.name.function",
+        "new.expr support.class"
+      ],
+      "settings": {
+        "foreground": "{{turquoise}}"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.type",
+        "entity.name.type.interface",
+        "entity.name.type.alias",
+        "entity.name.type.enum"
+      ],
+      "settings": {
+        "foreground": "{{pelorous}}"
+      }
+    },
+    {
+      "scope": ["meta.at-rule"],
+      "settings": {
+        "foreground": "{{portage}}"
+      }
+    },
+    {
+      "scope": [
+        "variable.other.readwrite.alias",
+        "meta.type.annotation entity.name.type",
+        "meta.type.parameters entity.name.type",
+        "meta.return.type entity.name.type",
+        "meta.interface entity.other.inherited-class",
+        "meta.object.member variable.other.readwrite",
+        "entity.name.type.rust"
+      ],
+      "settings": {
+        "foreground": "{{portage}}"
+      }
+    },
+    {
+      "scope": ["entity.name.type.struct"],
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": ["constant.language", "support.type.builtin"],
+      "settings": {
+        "foreground": "{{indigo}}"
+      }
+    },
+    {
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "{{turquoise}}"
+      }
+    },
+    {
+      "scope": [
+        "variable",
+        "expression.ng variable.other.readwrite",
+        "support.type.property-name",
+        "meta.object-literal.key",
+        "variable.other.rust",
+        "variable.other.readwrite",
+        "keyword.key"
+      ],
+      "settings": {
+        "foreground": "{{nonPhotoBlue}}"
+      }
+    },
+    {
+      "scope": "punctuation.support.type.property-name",
+      "settings": {
+        "foreground": "{{indigo}}"
+      }
+    },
+    {
+      "scope": ["meta.ng-binding.event expression.ng variable.other.readwrite"],
+      "settings": {
+        "foreground": "{{nonPhotoBlue}}"
+      }
+    },
+    {
+      "scope": ["variable.other.constant", "support.variable.property"],
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": "variable.other.readwrite",
+      "settings": {
+        "foreground": "{{nonPhotoBlue}}"
+      }
+    },
+    {
+      "scope": "variable.language",
+      "settings": {
+        "foreground": "{{froly}}"
+      }
+    },
+    {
+      "scope": "variable.scss",
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": "variable.parameter",
+      "settings": {
+        "foreground": "{{teaGreen}}",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": ["comment", "punctuation.definition.comment"],
+      "settings": {
+        "foreground": "{{nevada}}"
+      }
+    },
+    {
+      "scope": ["source.rust meta.attribute.rust punctuation.definition.attribute.rust"],
+      "settings": {
+        "foreground": "{{pictonBlue}}"
+      }
+    },
+    {
+      "scope": ["source.rust meta.attribute.rust"],
+      "settings": {
+        "foreground": "{{indigo}}"
+      }
+    },
+    {
+      "scope": ["keyword.operator"],
+      "settings": {
+        "foreground": "{{pelorous}}"
+      }
+    },
+    {
+      "scope": ["keyword.operator.new", "keyword.operator.expression"],
+      "settings": {
+        "foreground": "{{softPurple}}"
+      }
+    },
+    {
+      "scope": ["keyword.operator.type", "meta.brace.round", "punctuation.accessor"],
+      "settings": {
+        "foreground": "{{iron}}"
+      }
+    },
+    {
+      "scope": ["keyword.other.unit"],
+      "settings": {
+        "foreground": "{{pelorous}}"
+      }
+    },
+    {
+      "scope": ["meta.brace.round", "punctuation.accessor"],
+      "settings": {
+        "foreground": "{{silverChalice}}"
+      }
+    },
+    {
+      "scope": ["punctuation.definition.template-expression", "punctuation.section.embedded.rust"],
+      "settings": {
+        "foreground": "{{softPurple}}"
+      }
+    },
+    {
+      "scope": ["punctuation.section.embedded.rust"],
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": ["support.type.primitive"],
+      "settings": {
+        "foreground": "{{pistachio}}"
+      }
+    },
+    {
+      "scope": ["support.class.builtin", "meta.block entity.name.type"],
+      "settings": {
+        "foreground": "{{froly}}"
+      }
+    },
+    {
+      "scope": ["meta.class support.class.error"],
+      "settings": {
+        "foreground": "{{froly}}"
+      }
+    },
+    {
+      "scope": "entity.name.tag",
+      "settings": {
+        "foreground": "{{mint}}"
+      }
+    },
+    {
+      "scope": "entity.name.tag support.class.component",
+      "settings": {
+        "foreground": "{{newColor2}}"
+      }
+    },
+    {
+      "scope": ["entity.other.attribute-name", "punctuation.definition.ng-binding-name"],
+      "settings": {
+        "foreground": "{{deYork}}",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "entity.other.attribute-name.id",
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": ["entity.other.attribute-name.class", "punctuation.definition.entity"],
+      "settings": {
+        "foreground": "{{whiskey}}"
+      }
+    },
+    {
+      "scope": "meta.at-rule.apply.tailwind entity.other.attribute-name.class",
+      "settings": {
+        "foreground": "{{portage}}"
+      }
+    },
+    {
+      "scope": "entity.other.ng-binding-name",
+      "settings": {
+        "foreground": "{{mint}}"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.string",
+        "string.quoted.double punctuation.definition.block",
+        "text.html.derivative punctuation.definition.block"
+      ],
+      "settings": {
+        "foreground": "{{brown}}"
+      }
+    },
+    {
+      "scope": "support.type.object.module",
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": "support.constant.property-value",
+      "settings": {
+        "foreground": "{{indigo}}"
+      }
+    },
+    {
+      "scope": ["support.constant.font-name", "meta.property-value"],
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    },
+    {
+      "scope": "punctuation",
+      "settings": {
+        "foreground": "{{silverChalice}}"
+      }
+    },
+    {
+      "scope": "punctuation.definition.keyword",
+      "settings": {
+        "foreground": "{{softPurple}}"
+      }
+    },
+    {
+      "scope": "support.type.vendored",
+      "settings": {
+        "foreground": "{{deYork}}"
+      }
+    },
+    {
+      "scope": "constant.character.entity",
+      "settings": {
+        "foreground": "{{indigo}}"
+      }
+    },
+    {
+      "scope": ["source"],
+      "settings": {
+        "foreground": "{{silverChalice}}"
+      }
+    },
+    {
+      "scope": ["meta.function-call"],
+      "settings": {
+        "foreground": "{{chalky}}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "scope": [ "source.sql" ],
+    "settings": { "foreground": "{{nonPhotoBlue}}" }
+  },
+  {
+    "scope": [
+      "keyword.other.DML.sql",
+      "keyword.other.DDL.sql",
+      "keyword.other.sql",
+      "keyword.reserved.sql"
+    ],
+    "settings": { "foreground": "{{softPurple}}", "fontStyle": "italic" }
+  },
+  {
+    "scope": [ "storage.type.sql" ],
+    "settings": { "foreground": "{{indigo}}", "fontStyle": "italic" }
+  },
+  {
+    "scope": [
+      "support.function.aggregate.sql",
+      "support.function.sql",
+      "entity.name.function.sql"
+    ],
+    "settings": { "foreground": "{{malibu}}" }
+  },
+  {
+    "scope": [ "variable.other.sql", "variable.parameter.sql" ],
+    "settings": { "foreground": "{{teaGreen}}", "fontStyle": "italic" }
+  },
+  {
+    "scope": [ "entity.name.sql", "entity.name.type.sql" ],
+    "settings": { "foreground": "{{pelorous}}" }
+  }
+]
