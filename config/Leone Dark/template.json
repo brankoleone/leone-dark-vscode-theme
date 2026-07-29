@@ -12,13 +12,13 @@
 
     "button.background": "#33548D",
     "button.foreground": "#D7DAE0",
-    "button.secondaryBackground": "#404754",
+    "button.secondaryBackground": "{{shipGray}}",
     "button.secondaryForeground": "#D7DAE0",
 
     "debugToolBar.background": "{{blackPearl}}",
     "diffEditor.insertedTextBackground": "#00809b33",
-    "dropdown.background": "#2E343F",
-    "dropdown.border": "#333944",
+    "dropdown.background": "{{ebonyClay}}",
+    "dropdown.border": "{{gunPowder}}",
 
     "editor.foreground": "{{silverChalice}}",
     "editor.background": "{{blackPearl}}",
@@ -47,7 +47,7 @@
     "editorGroup.dropBackground": "#00000060",
     "editorGroup.emptyBackground": "{{mirage}}",
     "editorGroup.border": "{{mirage}}",
-    "editorGroupHeader.tabsBackground": "#1C202B",
+    "editorGroupHeader.tabsBackground": "{{vulcan}}",
 
     "editorHoverWidget.background": "{{blackPearl}}",
     "editorHoverWidget.border": "{{mirage}}",
@@ -87,7 +87,7 @@
 
     "menu.foreground": "#C8C8C8",
     "panelSectionHeader.background": "#212530",
-    "peekViewEditor.background": "#1B1D23",
+    "peekViewEditor.background": "{{shark}}",
     "peekViewEditor.matchHighlightBackground": "#29244B",
     "peekViewResult.background": "#20252E",
     "scrollbarSlider.activeBackground": "#747D9180",
@@ -102,10 +102,10 @@
     "editorGutter.modifiedBackground": "#518EC7",
     "editorGutter.deletedBackground": "#E05561",
 
-    "sideBar.background": "#1C202B",
+    "sideBar.background": "{{vulcan}}",
     "sideBar.foreground": "#5F6A79",
     "sideBar.border": "#252A35",
-    "sideBarSectionHeader.background": "#2E343F",
+    "sideBarSectionHeader.background": "{{ebonyClay}}",
     "sideBarSectionHeader.border": "#252A35",
 
     "statusBar.background": "#33548D",
@@ -125,7 +125,7 @@
     "tab.border": "#212530",
     "tab.activeBorderTop": "#47BFEE",
     "tab.hoverBackground": "#2A2F3A",
-    "tab.inactiveBackground": "#2E343F",
+    "tab.inactiveBackground": "{{ebonyClay}}",
     "tab.unfocusedHoverBackground": "#323842",
 
     "terminal.ansiBrightBlack": "#4F5666",

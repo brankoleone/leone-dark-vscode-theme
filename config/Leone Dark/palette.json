@@ -31,5 +31,10 @@
   "midnightExpress": "#232937",
   "blackRock": "#2C313C",
   "blackPearl": "#212530",
-  "mirage": "#181A1F"
+  "mirage": "#181A1F",
+  "shipGray": "#404754",
+  "ebonyClay": "#2E343F",
+  "gunPowder": "#333944",
+  "vulcan": "#1C202B",
+  "shark": "#1B1D23"
 }
