@@ -4,8 +4,10 @@
   "colors": {
     "activityBar.background": "#F3EEE5",
     "activityBar.foreground": "#383C46",
+    "activityBarBadge.background": "#2EA0E8",
     "activityBarBadge.foreground": "#FFFFFF",
     "activityBar.activeBackground": "#F7ECD6",
+    "activityBar.activeBorder": "#2EA0E8",
     "activityBar.inactiveForeground": "#383C46",
     "button.background": "#2B4C86",
     "button.foreground": "#F2F5FA",
@@ -20,6 +22,7 @@
     "editor.wordHighlightBackground": "#00000000",
     "editor.wordHighlightBorder": "#E2D4B8",
     "editor.wordHighlightStrongBackground": "#00000000",
+    "editor.wordHighlightStrongBorder": "#2EA0E8",
     "editor.lineHighlightBackground": "#F6F3EC",
     "editor.findMatchBackground": "#FFB65C77",
     "editor.findMatchBorder": "#bb8725",
@@ -56,10 +59,12 @@
     "editor.selectionHighlightBackground": "#F6F3EC",
     "focusBorder": "#1684df",
     "input.background": "#F6F3EC",
+    "inputOption.activeForeground": "#2EA0E8",
     "list.activeSelectionBackground": "#E2D4B8",
     "list.activeSelectionForeground": "#383C46",
     "list.focusBackground": "#E2D4B8",
     "list.focusForeground": "#383C46",
+    "list.highlightForeground": "#2EA0E8",
     "list.hoverBackground": "#F6F3EC",
     "list.hoverForeground": "#383C46",
     "list.inactiveSelectionBackground": "#F3EEE5",
@@ -106,10 +111,12 @@
     "tab.activeBackground": "#FAF9F7",
     "tab.activeForeground": "#383C46",
     "tab.border": "#E8DFCC",
+    "tab.activeBorderTop": "#2EA0E8",
     "tab.hoverBackground": "#F6F3EC",
     "tab.inactiveBackground": "#F3EEE5",
     "tab.unfocusedHoverBackground": "#F3EEE5",
     "terminal.ansiBrightBlack": "#4B5162",
+    "terminal.ansiBrightBlue": "#2EA0E8",
     "terminal.ansiBrightCyan": "#0A7481",
     "terminal.ansiBrightGreen": "#98C379",
     "terminal.ansiBrightMagenta": "#A6316A",
@@ -246,13 +253,13 @@
     },
     {
       "scope": [ "comment", "punctuation.definition.comment" ],
-      "settings": { "foreground": "#6B7385" }
+      "settings": { "foreground": "#9EA4B4" }
     },
     {
       "scope": [
         "source.rust meta.attribute.rust punctuation.definition.attribute.rust"
       ],
-      "settings": {}
+      "settings": { "foreground": "#2EA0E8" }
     },
     {
       "scope": [ "source.rust meta.attribute.rust" ],
@@ -291,7 +298,7 @@
     },
     {
       "scope": [ "support.type.primitive" ],
-      "settings": { "foreground": "#98C379" }
+      "settings": { "foreground": "#2EA7B7" }
     },
     {
       "scope": [ "support.class.builtin", "meta.block entity.name.type" ],

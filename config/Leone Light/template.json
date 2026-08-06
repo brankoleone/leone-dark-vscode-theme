@@ -347,7 +347,7 @@
     {
       "scope": ["comment", "punctuation.definition.comment"],
       "settings": {
-        "foreground": "{{nevada}}"
+        "foreground": "{{santasGray}}"
       }
     },
     {
@@ -407,7 +407,7 @@
     {
       "scope": ["support.type.primitive"],
       "settings": {
-        "foreground": "{{pistachio}}"
+        "foreground": "{{pelorous}}"
       }
     },
     {
