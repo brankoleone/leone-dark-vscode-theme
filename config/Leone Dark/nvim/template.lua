@@ -37,17 +37,20 @@ local p = {
   blackRock       = "{{blackRock}}",
   blackPearl      = "{{blackPearl}}",
   mirage          = "{{mirage}}",
+  vulcan          = "{{vulcan}}",
+  ebonyClay       = "{{ebonyClay}}",
   -- extra UI shades pulled from template.json literals
-  sideBar         = "#1C202B",
-  tabActive       = "#252A35",
-  tabInactive     = "#2E343F",
-  statusText      = "#E7E7E7",
-  editorFg        = "#ABABAB",
+  bgFloat         = "#212530",
+  bgSelection     = "#455368",
+  bgVisualNos     = "#2C313C",
+  bgPopupSelect   = "#383E4A",
+  bgTab           = "#2E343F",
+  bgSidebar       = "#1C202B",
+  border          = "#252A35",
   cursor          = "#528BFF",
   errorRed        = "#C24038",
-  gutterAdd       = "#50AF8E",
-  gutterMod       = "#518EC7",
-  gutterDel       = "#E05561",
+  white           = "#FFFFFF",
+  statusText      = "#E7E7E7",
 }
 
 function M.setup()
@@ -63,51 +66,100 @@ function M.setup()
     vim.api.nvim_set_hl(0, group, spec)
   end
 
+  local function link(group, target)
+    hi(group, { link = target })
+  end
+
   -- ── Editor / UI ───────────────────────────────────────────────
   hi("Normal",        { fg = p.silverChalice, bg = p.blackPearl })
-  hi("NormalFloat",   { fg = p.silverChalice, bg = p.blackPearl })
-  hi("FloatBorder",   { fg = p.mirage,        bg = p.blackPearl })
-  hi("NormalNC",      { fg = p.silverChalice, bg = p.blackPearl })
-  hi("ColorColumn",   { bg = p.blackRock })
-  hi("Cursor",        { fg = p.blackPearl,    bg = p.cursor })
-  hi("CursorLine",    { bg = p.blackRock })
-  hi("CursorLineNr",  { fg = p.chambray,      bold = true })
-  hi("LineNr",        { fg = p.fiord })
-  hi("SignColumn",    { bg = p.blackPearl })
-  hi("VertSplit",     { fg = p.mirage })
-  hi("WinSeparator",  { fg = p.mirage })
-  hi("Folded",        { fg = p.nevada,        bg = p.blackRock })
-  hi("FoldColumn",    { fg = p.fiord })
-  hi("Visual",        { bg = p.fiord })
-  hi("Search",        { fg = p.chalky,        bg = p.blackRock })
-  hi("IncSearch",     { fg = p.blackPearl,    bg = p.whiskey })
-  hi("CurSearch",     { fg = p.blackPearl,    bg = p.chalky })
-  hi("MatchParen",    { fg = p.turquoise,     bold = true })
-  hi("NonText",       { fg = p.fiord })
-  hi("Whitespace",    { fg = p.fiord })
-  hi("SpecialKey",    { fg = p.fiord })
-  hi("Pmenu",         { fg = p.silverChalice, bg = p.blackPearl })
-  hi("PmenuSel",      { fg = "#FFFFFF",       bg = p.blackRock })
-  hi("PmenuSbar",     { bg = p.blackRock })
-  hi("PmenuThumb",    { bg = p.fiord })
-  hi("StatusLine",    { fg = p.statusText,    bg = p.chambray })
-  hi("StatusLineNC",  { fg = p.nevada,        bg = p.sideBar })
-  hi("TabLine",       { fg = p.nevada,        bg = p.tabInactive })
-  hi("TabLineSel",    { fg = "#DCDCDC",       bg = p.tabActive })
-  hi("TabLineFill",   { bg = p.blackPearl })
-  hi("Title",         { fg = p.malibu,        bold = true })
-  hi("Directory",     { fg = p.malibu })
-  hi("WildMenu",      { fg = "#FFFFFF",       bg = p.chambray })
-  hi("QuickFixLine",  { bg = p.blackRock })
-  hi("ErrorMsg",      { fg = p.errorRed })
-  hi("WarningMsg",    { fg = p.whiskey })
-  hi("MoreMsg",       { fg = p.mint })
-  hi("ModeMsg",       { fg = p.silverChalice })
-  hi("Question",      { fg = p.mint })
+  hi("NormalNC",       { fg = p.silverChalice, bg = p.blackPearl })
+  hi("NormalFloat",    { fg = p.silverChalice, bg = p.bgFloat })
+  hi("FloatBorder",    { fg = p.fiord,         bg = p.bgFloat })
+  hi("FloatTitle",     { fg = p.pictonBlue,    bg = p.bgFloat, bold = true })
+  hi("WinSeparator",   { fg = p.border,        bg = p.blackPearl })
+  hi("VertSplit",      { fg = p.border,        bg = p.blackPearl })
+  hi("ColorColumn",    { bg = p.midnightExpress })
+  hi("Cursor",         { fg = p.blackPearl,    bg = p.cursor })
+  hi("lCursor",        { fg = p.blackPearl,    bg = p.cursor })
+  hi("CursorIM",       { fg = p.blackPearl,    bg = p.cursor })
+  hi("CursorColumn",   { bg = p.blackRock })
+  hi("CursorLine",     { bg = p.blackRock })
+  hi("CursorLineNr",   { fg = p.chambray,      bg = p.blackRock, bold = true })
+  hi("LineNr",         { fg = p.fiord,         bg = p.blackPearl })
+  hi("LineNrAbove",    { fg = p.fiord,         bg = p.blackPearl })
+  hi("LineNrBelow",    { fg = p.fiord,         bg = p.blackPearl })
+  hi("SignColumn",     { fg = p.fiord,         bg = p.blackPearl })
+  hi("FoldColumn",     { fg = p.fiord,         bg = p.blackPearl })
+  hi("Folded",         { fg = p.nevada,        bg = p.midnightExpress })
+  hi("EndOfBuffer",    { fg = p.mirage,        bg = p.blackPearl })
+  hi("NonText",        { fg = p.fiord })
+  hi("Whitespace",     { fg = p.fiord })
+  hi("SpecialKey",     { fg = p.fiord })
+  hi("Conceal",        { fg = p.fiord })
+
+  hi("Visual",         { bg = p.bgSelection })
+  hi("VisualNOS",       { bg = p.bgVisualNos })
+  hi("Search",         { fg = p.chalky,        bg = "#000000" })
+  hi("IncSearch",       { fg = p.blackPearl,    bg = p.whiskey })
+  hi("CurSearch",       { fg = p.blackPearl,    bg = p.chalky })
+  hi("Substitute",      { fg = p.blackPearl,    bg = p.watermelon })
+  hi("MatchParen",      { fg = p.chalky,        bg = "#000000", bold = true })
+
+  hi("Pmenu",           { fg = p.silverChalice, bg = p.blackPearl })
+  hi("PmenuSel",         { fg = p.white,         bg = p.bgPopupSelect })
+  hi("PmenuKind",        { fg = p.pictonBlue,    bg = p.blackPearl })
+  hi("PmenuKindSel",     { fg = p.pictonBlue,    bg = p.bgPopupSelect })
+  hi("PmenuExtra",       { fg = p.nevada,        bg = p.blackPearl })
+  hi("PmenuExtraSel",    { fg = p.nevada,        bg = p.bgPopupSelect })
+  hi("PmenuSbar",        { bg = "#4E5666" })
+  hi("PmenuThumb",       { bg = "#747D91" })
+  hi("WildMenu",         { fg = p.white,         bg = p.bgPopupSelect })
+
+  hi("StatusLine",       { fg = p.statusText,    bg = p.chambray })
+  hi("StatusLineNC",     { fg = p.silverChalice, bg = p.blackPearl })
+  hi("TabLine",          { fg = p.silverChalice, bg = p.bgTab })
+  hi("TabLineSel",       { fg = "#DCDCDC",       bg = p.border, bold = true })
+  hi("TabLineFill",      { bg = p.blackPearl })
+  hi("WinBar",           { fg = p.silverChalice, bg = p.blackPearl })
+  hi("WinBarNC",         { fg = p.nevada,        bg = p.blackPearl })
+
+  hi("MsgArea",          { fg = p.silverChalice, bg = p.blackPearl })
+  hi("ModeMsg",          { fg = p.deYork })
+  hi("MoreMsg",          { fg = p.deYork })
+  hi("Question",         { fg = p.deYork })
+  hi("WarningMsg",       { fg = p.whiskey })
+  hi("ErrorMsg",         { fg = p.errorRed })
+  hi("Directory",        { fg = p.deYork })
+  hi("Title",            { fg = p.malibu,        bold = true })
+
+  -- ── Diff ──────────────────────────────────────────────────────
+  hi("DiffAdd",     { fg = p.mint,       bg = "#1F3638" })
+  hi("DiffChange",  { fg = p.malibu,     bg = "#1F2D3D" })
+  hi("DiffDelete",  { fg = p.watermelon, bg = "#3A202A" })
+  hi("DiffText",    { fg = p.pictonBlue, bg = p.chambray, bold = true })
+  hi("Added",       { fg = p.mint })
+  hi("Changed",     { fg = p.malibu })
+  hi("Removed",     { fg = p.watermelon })
+
+  -- ── Diagnostics ───────────────────────────────────────────────
+  hi("DiagnosticError", { fg = p.errorRed })
+  hi("DiagnosticWarn",  { fg = p.whiskey })
+  hi("DiagnosticInfo",  { fg = p.malibu })
+  hi("DiagnosticHint",  { fg = p.fountainBlue })
+  hi("DiagnosticOk",    { fg = p.mint })
+  hi("DiagnosticUnderlineError", { sp = p.errorRed,     undercurl = true })
+  hi("DiagnosticUnderlineWarn",  { sp = p.whiskey,      undercurl = true })
+  hi("DiagnosticUnderlineInfo",  { sp = p.malibu,       undercurl = true })
+  hi("DiagnosticUnderlineHint",  { sp = p.fountainBlue, undercurl = true })
+  hi("DiagnosticUnderlineOk",    { sp = p.mint,         undercurl = true })
+  hi("DiagnosticVirtualTextError", { fg = p.errorRed,     bg = "#2C202A" })
+  hi("DiagnosticVirtualTextWarn",  { fg = p.whiskey,      bg = "#2D2A24" })
+  hi("DiagnosticVirtualTextInfo",  { fg = p.malibu,       bg = "#202A35" })
+  hi("DiagnosticVirtualTextHint",  { fg = p.fountainBlue, bg = "#1F2D33" })
 
   -- ── Syntax (legacy groups) ────────────────────────────────────
-  hi("Comment",       { fg = p.nevada,        italic = true })
-  hi("Constant",      { fg = p.whiskey })
+  hi("Comment",       { fg = p.nevada })
+  hi("Constant",      { fg = p.chalky })
   hi("String",        { fg = p.whiskey,       italic = true })
   hi("Character",     { fg = p.whiskey })
   hi("Number",        { fg = p.turquoise })
@@ -118,213 +170,286 @@ function M.setup()
   hi("Statement",     { fg = p.softPurple,    italic = true })
   hi("Conditional",   { fg = p.softPurple,    italic = true })
   hi("Repeat",        { fg = p.softPurple,    italic = true })
-  hi("Label",         { fg = p.softPurple })
+  hi("Label",         { fg = p.portage })
   hi("Operator",      { fg = p.pelorous })
   hi("Keyword",       { fg = p.softPurple,    italic = true })
   hi("Exception",     { fg = p.softPurple,    italic = true })
-  hi("PreProc",       { fg = p.portage })
+  hi("PreProc",       { fg = p.softPurple,    italic = true })
   hi("Include",       { fg = p.softPurple,    italic = true })
-  hi("Define",        { fg = p.softPurple })
+  hi("Define",        { fg = p.portage })
   hi("Macro",         { fg = p.portage })
-  hi("Type",          { fg = p.pelorous })
+  hi("PreCondit",     { fg = p.portage })
+  hi("Type",          { fg = p.pistachio })
   hi("StorageClass",  { fg = p.indigo,        italic = true })
-  hi("Structure",     { fg = p.chalky })
+  hi("Structure",     { fg = p.pelorous })
   hi("Typedef",       { fg = p.pelorous })
-  hi("Special",       { fg = p.malibu })
+  hi("Special",       { fg = p.indigo })
   hi("SpecialChar",   { fg = p.indigo })
   hi("Tag",           { fg = p.mint })
   hi("Delimiter",     { fg = p.silverChalice })
-  hi("SpecialComment",{ fg = p.nevada })
+  hi("SpecialComment",{ fg = p.pictonBlue })
+  hi("Debug",         { fg = p.watermelon })
   hi("Underlined",    { fg = p.malibu,        underline = true })
+  hi("Ignore",        { fg = p.fiord })
   hi("Error",         { fg = p.errorRed })
-  hi("Todo",          { fg = p.blackPearl,    bg = p.chalky, bold = true })
-
-  -- ── Diagnostics ───────────────────────────────────────────────
-  hi("DiagnosticError", { fg = p.errorRed })
-  hi("DiagnosticWarn",  { fg = p.whiskey })
-  hi("DiagnosticInfo",  { fg = p.malibu })
-  hi("DiagnosticHint",  { fg = p.fountainBlue })
-  hi("DiagnosticUnderlineError", { undercurl = true, sp = p.errorRed })
-  hi("DiagnosticUnderlineWarn",  { undercurl = true, sp = p.whiskey })
-  hi("DiagnosticUnderlineInfo",  { undercurl = true, sp = p.malibu })
-  hi("DiagnosticUnderlineHint",  { undercurl = true, sp = p.fountainBlue })
-
-  -- ── Git / diff ────────────────────────────────────────────────
-  hi("DiffAdd",    { bg = "#20351f" })
-  hi("DiffChange", { bg = "#1f2c3a" })
-  hi("DiffDelete", { fg = p.gutterDel })
-  hi("DiffText",   { bg = "#2a4a63" })
-  hi("diffAdded",   { fg = p.mint })
-  hi("diffRemoved", { fg = p.gutterDel })
-  hi("diffChanged", { fg = p.malibu })
-  hi("GitSignsAdd",    { fg = p.gutterAdd })
-  hi("GitSignsChange", { fg = p.gutterMod })
-  hi("GitSignsDelete", { fg = p.gutterDel })
+  hi("Todo",          { fg = p.chalky,        bold = true })
 
   -- ── Treesitter ────────────────────────────────────────────────
-  hi("@comment",              { link = "Comment" })
-  hi("@comment.documentation",{ fg = p.nevada, italic = true })
+  hi("@comment",              { fg = p.nevada })
+  hi("@none",                 { fg = p.silverChalice })
+  hi("@preproc",              { fg = p.softPurple, italic = true })
+  hi("@define",               { fg = p.portage })
+  hi("@operator",             { fg = p.pelorous })
+
   hi("@punctuation.delimiter",{ fg = p.silverChalice })
-  hi("@punctuation.bracket",  { fg = p.silverChalice })
+  hi("@punctuation.bracket",  { fg = p.iron })
   hi("@punctuation.special",  { fg = p.softPurple })
 
-  hi("@constant",           { fg = p.whiskey })
-  hi("@constant.builtin",   { fg = p.indigo })
-  hi("@constant.macro",     { fg = p.portage })
-  hi("@string",             { fg = p.whiskey, italic = true })
-  hi("@string.regexp",      { fg = p.fountainBlue })
-  hi("@string.escape",      { fg = p.indigo })
-  hi("@string.special",     { fg = p.indigo })
-  hi("@character",          { fg = p.whiskey })
-  hi("@number",             { fg = p.turquoise })
-  hi("@number.float",       { fg = p.turquoise })
-  hi("@boolean",            { fg = p.indigo })
+  hi("@string",              { fg = p.whiskey, italic = true })
+  hi("@string.documentation",{ fg = p.whiskey, italic = true })
+  hi("@string.regexp",       { fg = p.fountainBlue })
+  hi("@string.escape",       { fg = p.indigo })
+  hi("@string.special",      { fg = p.indigo })
+  hi("@character",           { fg = p.whiskey })
+  hi("@character.special",   { fg = p.indigo })
+  hi("@boolean",             { fg = p.indigo })
+  hi("@number",              { fg = p.turquoise })
+  hi("@number.float",        { fg = p.turquoise })
+
+  hi("@function",            { fg = p.malibu })
+  hi("@function.builtin",    { fg = p.malibu })
+  hi("@function.call",       { fg = p.malibu })
+  hi("@function.macro",      { fg = p.malibu })
+  hi("@function.method",     { fg = p.malibu })
+  hi("@function.method.call",{ fg = p.malibu })
+  hi("@method",              { fg = p.malibu })
+  hi("@method.call",         { fg = p.malibu })
+  hi("@constructor",         { fg = p.malibu })
+  hi("@parameter",           { fg = p.teaGreen, italic = true })
+
+  hi("@keyword",              { fg = p.softPurple, italic = true })
+  hi("@keyword.conditional",  { fg = p.softPurple, italic = true })
+  hi("@keyword.repeat",       { fg = p.softPurple, italic = true })
+  hi("@keyword.return",       { fg = p.softPurple, italic = true })
+  hi("@keyword.exception",    { fg = p.softPurple, italic = true })
+  hi("@keyword.declaration",  { fg = p.indigo,     italic = true })
+  hi("@keyword.function",     { fg = p.indigo,     italic = true })
+  hi("@keyword.import",       { fg = p.softPurple, italic = true })
+  hi("@keyword.coroutine",    { fg = p.softPurple, italic = true })
+  hi("@keyword.modifier",     { fg = p.softPurple, italic = true })
+  hi("@keyword.operator",     { fg = p.softPurple, italic = true })
+  hi("@keyword.storage",      { fg = p.indigo,     italic = true })
+  hi("@keyword.type",         { fg = p.indigo,     italic = true })
+  hi("@conditional",          { fg = p.softPurple, italic = true })
+  hi("@repeat",               { fg = p.softPurple, italic = true })
+  hi("@exception",            { fg = p.softPurple, italic = true })
 
   hi("@variable",           { fg = p.nonPhotoBlue })
-  hi("@variable.builtin",   { fg = p.froly })
+  hi("@variable.builtin",   { fg = p.nonPhotoBlue })
   hi("@variable.parameter", { fg = p.teaGreen, italic = true })
-  hi("@variable.member",    { fg = p.chalky })
-
-  hi("@function",           { fg = p.malibu })
-  hi("@function.builtin",   { fg = p.malibu })
-  hi("@function.call",      { fg = p.malibu })
-  hi("@function.macro",     { fg = p.portage })
-  hi("@constructor",        { fg = p.turquoise })
-  hi("@method",             { fg = p.malibu })
-  hi("@method.call",        { fg = p.malibu })
-
-  hi("@keyword",            { fg = p.softPurple, italic = true })
-  hi("@keyword.function",   { fg = p.indigo,     italic = true })
-  hi("@keyword.operator",   { fg = p.pelorous })
-  hi("@keyword.return",     { fg = p.softPurple, italic = true })
-  hi("@keyword.import",     { fg = p.softPurple, italic = true })
-  hi("@keyword.conditional",{ fg = p.softPurple, italic = true })
-  hi("@keyword.repeat",     { fg = p.softPurple, italic = true })
-  hi("@keyword.exception",  { fg = p.softPurple, italic = true })
-  hi("@operator",           { fg = p.pelorous })
+  hi("@variable.member",    { fg = p.nonPhotoBlue })
+  hi("@property",           { fg = p.nonPhotoBlue })
+  hi("@field",              { fg = p.nonPhotoBlue })
+  hi("@constant",           { fg = p.chalky })
+  hi("@constant.builtin",   { fg = p.indigo })
+  hi("@constant.macro",     { fg = p.chalky })
+  hi("@module",             { fg = p.deYork })
+  hi("@namespace",          { fg = p.deYork })
+  hi("@symbol",             { fg = p.nonPhotoBlue })
 
   hi("@type",               { fg = p.pelorous })
   hi("@type.builtin",       { fg = p.pistachio })
   hi("@type.definition",    { fg = p.pelorous })
-  hi("@type.qualifier",     { fg = p.indigo, italic = true })
+  hi("@type.qualifier",     { fg = p.softPurple, italic = true })
   hi("@storageclass",       { fg = p.indigo, italic = true })
   hi("@attribute",          { fg = p.pictonBlue })
-  hi("@property",           { fg = p.nonPhotoBlue })
-  hi("@namespace",          { fg = p.deYork })
-  hi("@module",             { fg = p.deYork })
-  hi("@label",              { fg = p.softPurple })
+  hi("@label",              { fg = p.portage })
 
   -- markup / tags (HTML, JSX, markdown)
-  hi("@tag",                { fg = p.mint })
-  hi("@tag.builtin",        { fg = p.mint })
-  hi("@tag.attribute",      { fg = p.deYork, italic = true })
-  hi("@tag.delimiter",      { fg = p.silverChalice })
-  hi("@markup.heading",     { fg = p.malibu, bold = true })
-  hi("@markup.strong",      { bold = true })
-  hi("@markup.italic",      { italic = true })
-  hi("@markup.link",        { fg = p.malibu, underline = true })
-  hi("@markup.link.url",    { fg = p.fountainBlue })
-  hi("@markup.raw",         { fg = p.whiskey })
-  hi("@markup.list",        { fg = p.softPurple })
+  hi("@tag",                 { fg = p.newColor2 })
+  hi("@tag.builtin",         { fg = p.mint })
+  hi("@tag.html",            { fg = p.mint })
+  hi("@tag.html_tags",       { fg = p.mint })
+  hi("@tag.tsx",             { fg = p.newColor2 })
+  hi("@tag.builtin.tsx",     { fg = p.mint })
+  hi("@tag.javascript",      { fg = p.newColor2 })
+  hi("@tag.builtin.javascript", { fg = p.mint })
+  hi("@tag.attribute",       { fg = p.deYork, italic = true })
+  hi("@tag.delimiter",       { fg = p.silverChalice })
 
-  -- ── LSP semantic tokens (from semanticTokenColors) ────────────
-  hi("@lsp.type.enumMember",        { fg = p.nonPhotoBlue })
-  hi("@lsp.type.variable",          { fg = p.nonPhotoBlue })
-  hi("@lsp.typemod.variable.constant",   { fg = p.whiskey })
-  -- const variables → chalky at EVERY occurrence (definition + usage). The TS
-  -- language server tags const as variable/readonly; this is what colors const
-  -- *usages* yellow (Treesitter only sees the definition). Requires an attached
-  -- LSP with semantic tokens (e.g. vtsls / typescript-language-server).
+  hi("@markup.heading",           { fg = p.malibu, bold = true })
+  hi("@markup.heading.1.markdown",{ fg = p.malibu, bold = true })
+  hi("@markup.raw",               { fg = p.whiskey, italic = true })
+  hi("@markup.link",              { fg = p.malibu, underline = true })
+  hi("@markup.link.url",          { fg = p.malibu, underline = true })
+  hi("@markup.link.label",        { fg = p.deYork })
+  hi("@markup.list",              { fg = p.turquoise })
+  hi("@markup.strong",            { fg = p.chalky, bold = true })
+  hi("@markup.italic",            { fg = p.pistachio, italic = true })
+  hi("@markup.quote",             { fg = p.nevada, italic = true })
+
+  hi("@text",           { fg = p.silverChalice })
+  hi("@text.strong",    { fg = p.chalky, bold = true })
+  hi("@text.emphasis",  { fg = p.pistachio, italic = true })
+  hi("@text.title",     { fg = p.malibu, bold = true })
+  hi("@text.literal",   { fg = p.whiskey, italic = true })
+  hi("@text.uri",       { fg = p.malibu, underline = true })
+  hi("@text.reference", { fg = p.deYork })
+  hi("@text.todo",      { fg = p.chalky, bold = true })
+
+  hi("@diff.plus",  { fg = p.mint })
+  hi("@diff.minus", { fg = p.watermelon })
+  hi("@diff.delta", { fg = p.malibu })
+
+  -- ── Links ─────────────────────────────────────────────────────
+  link("Float",       "Number")
+  link("htmlTag",     "Delimiter")
+  link("htmlEndTag",  "Delimiter")
+  link("htmlTagName", "Tag")
+  link("htmlArg",     "@tag.attribute")
+  link("xmlTagName",  "Tag")
+  link("xmlAttrib",   "@tag.attribute")
+  link("markdownHeadingDelimiter", "Ignore")
+  link("markdownCode",      "@markup.raw")
+  link("markdownCodeBlock", "@markup.raw")
+  link("markdownBold",      "@markup.strong")
+  link("markdownItalic",    "@markup.italic")
+
+  link("GitSignsAdd",    "Added")
+  link("GitSignsChange", "Changed")
+  link("GitSignsDelete", "Removed")
+  link("GitGutterAdd",    "Added")
+  link("GitGutterChange", "Changed")
+  link("GitGutterDelete", "Removed")
+
+  link("LspReferenceText",  "VisualNOS")
+  link("LspReferenceRead",  "VisualNOS")
+  link("LspReferenceWrite", "VisualNOS")
+
+  -- ── Plugins: nvim-tree ────────────────────────────────────────
+  hi("NvimTreeNormal",           { fg = p.nevada, bg = p.bgSidebar })
+  hi("NvimTreeNormalNC",         { fg = p.nevada, bg = p.bgSidebar })
+  hi("NvimTreeEndOfBuffer",      { fg = p.bgSidebar, bg = p.bgSidebar })
+  hi("NvimTreeWinSeparator",     { fg = p.border, bg = p.bgSidebar })
+  hi("NvimTreeRootFolder",       { fg = p.pictonBlue, bold = true })
+  hi("NvimTreeFolderName",       { fg = p.silverChalice })
+  hi("NvimTreeOpenedFolderName", { fg = p.silverChalice, bold = true })
+  hi("NvimTreeEmptyFolderName",  { fg = p.fiord })
+  hi("NvimTreeFileIcon",         { fg = p.silverChalice })
+  hi("NvimTreeSymlink",          { fg = p.fountainBlue })
+  hi("NvimTreeExecFile",         { fg = p.pistachio })
+  hi("NvimTreeSpecialFile",      { fg = p.chalky, underline = true })
+  hi("NvimTreeImageFile",        { fg = p.softPurple })
+  hi("NvimTreeIndentMarker",     { fg = p.fiord })
+  hi("NvimTreeGitDirty",         { fg = p.malibu })
+  hi("NvimTreeGitNew",           { fg = p.deYork })
+  hi("NvimTreeGitDeleted",       { fg = p.watermelon })
+  hi("NvimTreeGitIgnored",       { fg = "#343E50" })
+
+  -- ── Plugins: telescope ────────────────────────────────────────
+  hi("TelescopeNormal",    { fg = p.silverChalice, bg = p.bgFloat })
+  hi("TelescopeBorder",    { fg = p.fiord,         bg = p.bgFloat })
+  hi("TelescopeSelection", { fg = p.white,         bg = p.blackRock })
+  hi("TelescopeMatching",  { fg = p.pictonBlue,    bold = true })
+
+  -- ── Plugins: which-key ────────────────────────────────────────
+  hi("WhichKey",          { fg = p.pictonBlue })
+  hi("WhichKeyGroup",     { fg = p.deYork })
+  hi("WhichKeyDesc",      { fg = p.silverChalice })
+  hi("WhichKeySeparator", { fg = p.fiord })
+  hi("WhichKeyFloat",     { bg = p.bgFloat })
+
+  -- ── LSP semantic tokens ───────────────────────────────────────
+  hi("@lsp.type.namespace",   { fg = p.deYork })
+  hi("@lsp.type.type",        { fg = p.pelorous })
+  hi("@lsp.type.class",       { fg = p.pelorous })
+  hi("@lsp.type.enum",        { fg = p.pelorous })
+  hi("@lsp.type.interface",   { fg = p.pelorous })
+  hi("@lsp.type.struct",      { fg = p.pelorous })
+  hi("@lsp.type.typeParameter", { fg = p.pelorous })
+  hi("@lsp.type.parameter",   { fg = p.teaGreen, italic = true })
+  hi("@lsp.type.variable",    { fg = p.nonPhotoBlue })
+  hi("@lsp.type.property",    { fg = p.nonPhotoBlue })
+  hi("@lsp.type.enumMember",  { fg = p.chalky })
+  hi("@lsp.type.event",       { fg = p.nonPhotoBlue })
+  hi("@lsp.type.function",    { fg = p.malibu })
+  hi("@lsp.type.method",      { fg = p.malibu })
+  hi("@lsp.type.macro",       { fg = p.malibu })
+  hi("@lsp.type.constructor", { fg = p.malibu })
+  hi("@lsp.type.keyword",     { fg = p.softPurple, italic = true })
+  hi("@lsp.type.modifier",    { fg = p.softPurple, italic = true })
+  hi("@lsp.type.boolean",     { fg = p.indigo })
+  hi("@lsp.type.comment",     { fg = p.nevada })
+  hi("@lsp.type.string",      { fg = p.whiskey, italic = true })
+  hi("@lsp.type.number",      { fg = p.turquoise })
+  hi("@lsp.type.regexp",      { fg = p.fountainBlue })
+  hi("@lsp.type.operator",    { fg = p.pelorous })
+
+  hi("@lsp.mod.defaultLibrary", { fg = p.froly })
+  hi("@lsp.mod.deprecated",     { strikethrough = true })
+  hi("@lsp.mod.constant",       { fg = p.chalky })
+  hi("@lsp.typemod.type.defaultLibrary",         { fg = p.portage })
+  hi("@lsp.typemod.class.defaultLibrary",        { fg = p.portage })
+  hi("@lsp.typemod.enum.defaultLibrary",         { fg = p.portage })
+  hi("@lsp.typemod.interface.defaultLibrary",    { fg = p.portage })
+  hi("@lsp.typemod.struct.defaultLibrary",       { fg = p.portage })
+  hi("@lsp.typemod.typeParameter.defaultLibrary",{ fg = p.portage })
+  hi("@lsp.typemod.type.imported",         { fg = p.portage })
+  hi("@lsp.typemod.class.imported",        { fg = p.portage })
+  hi("@lsp.typemod.enum.imported",         { fg = p.portage })
+  hi("@lsp.typemod.interface.imported",    { fg = p.portage })
+  hi("@lsp.typemod.struct.imported",       { fg = p.portage })
+  hi("@lsp.typemod.typeParameter.imported",{ fg = p.portage })
+  hi("@lsp.typemod.type.declaration",         { fg = p.pelorous })
+  hi("@lsp.typemod.class.declaration",        { fg = p.pelorous })
+  hi("@lsp.typemod.enum.declaration",         { fg = p.pelorous })
+  hi("@lsp.typemod.interface.declaration",    { fg = p.pelorous })
+  hi("@lsp.typemod.struct.declaration",       { fg = p.pelorous })
+  hi("@lsp.typemod.typeParameter.declaration",{ fg = p.pelorous })
+  hi("@lsp.typemod.type.definition",         { fg = p.pelorous })
+  hi("@lsp.typemod.class.definition",        { fg = p.pelorous })
+  hi("@lsp.typemod.enum.definition",         { fg = p.pelorous })
+  hi("@lsp.typemod.interface.definition",    { fg = p.pelorous })
+  hi("@lsp.typemod.struct.definition",       { fg = p.pelorous })
+  hi("@lsp.typemod.typeParameter.definition",{ fg = p.pelorous })
+  hi("@lsp.typemod.variable.defaultLibrary", { fg = p.nonPhotoBlue })
+  hi("@lsp.typemod.variable.constant",       { fg = p.chalky })
   hi("@lsp.typemod.variable.readonly",       { fg = p.chalky })
-  hi("@lsp.typemod.variable.defaultLibrary", { fg = p.froly })
-  hi("@lsp.type.namespace",         { fg = p.deYork })
-  hi("@lsp.type.function",          { fg = p.malibu })
-  hi("@lsp.type.method",            { fg = p.malibu })
-  hi("@lsp.type.parameter",         { fg = p.teaGreen, italic = true })
-  hi("@lsp.type.property",          { fg = p.chalky })
-  hi("@lsp.type.class",             { fg = p.turquoise })
-  hi("@lsp.type.struct",            { fg = p.chalky })
-  hi("@lsp.type.interface",         { fg = p.pelorous })
-  hi("@lsp.type.enum",              { fg = p.pelorous })
-  hi("@lsp.type.type",              { fg = p.pelorous })
-  hi("@lsp.type.keyword",           { fg = p.softPurple, italic = true })
+  hi("@lsp.typemod.parameter.defaultLibrary",{ fg = p.teaGreen, italic = true })
+  hi("@lsp.typemod.parameter.constant",      { fg = p.teaGreen, italic = true })
+  hi("@lsp.typemod.parameter.declaration",   { fg = p.teaGreen, italic = true })
+  hi("@lsp.typemod.parameter.definition",    { fg = p.teaGreen, italic = true })
+  hi("@lsp.typemod.parameter.readonly",      { fg = p.teaGreen, italic = true })
+  hi("@lsp.typemod.property.defaultLibrary", { fg = p.nonPhotoBlue })
+  hi("@lsp.typemod.property.constant",       { fg = p.chalky })
+  hi("@lsp.typemod.property.readonly",       { fg = p.chalky })
+  hi("@lsp.typemod.enumMember.defaultLibrary", { fg = p.chalky })
+  hi("@lsp.typemod.enumMember.readonly",       { fg = p.chalky })
+  hi("@lsp.typemod.function.defaultLibrary", { fg = p.malibu })
+  hi("@lsp.typemod.function.declaration",    { fg = p.malibu })
+  hi("@lsp.typemod.function.definition",     { fg = p.malibu })
+  hi("@lsp.typemod.function.static",         { fg = p.malibu })
+  hi("@lsp.typemod.method.defaultLibrary",   { fg = p.malibu })
+  hi("@lsp.typemod.method.declaration",      { fg = p.malibu })
+  hi("@lsp.typemod.method.definition",       { fg = p.malibu })
+  hi("@lsp.typemod.method.static",           { fg = p.malibu })
 
-  -- ── TypeScript / TSX (exact port of template + syntax scopes) ─
-  -- Requires the after/queries/{typescript,tsx}/highlights.scm shipped
-  -- alongside this file (add nvim/ to runtimepath) for the object-key,
-  -- type-declaration, and class-name splits below to take effect.
-
-  -- Types: base @type = references/annotations → portage (matches
-  -- `meta.type.annotation entity.name.type`); declaration names → pelorous;
-  -- class names → turquoise; primitives (string/number/…) → pistachio.
-  hi("@type.typescript",            { fg = p.portage })
-  hi("@type.tsx",                   { fg = p.portage })
-  hi("@type.definition",            { fg = p.pelorous })
-  hi("@type.builtin",               { fg = p.pistachio })
-  hi("@constructor",                { fg = p.turquoise })
-
-  -- const-declared bindings → chalky (TS grammar's variable.other.constant).
-  hi("@leone.constant",             { fg = p.chalky })
-
-  -- Object-literal key (custom capture) vs. property access.
-  -- JS/TS property access is @variable.member (chalky). Object/JSON/CSS keys
-  -- are @property / @leone.objectKey and stay nonPhotoBlue (matches the theme's
-  -- support.type.property-name / meta.object-literal.key). Do NOT set @property
-  -- to chalky here — that also repaints JSON keys, which must be nonPhotoBlue.
-  hi("@leone.objectKey",            { fg = p.nonPhotoBlue })
-  hi("@variable.member",            { fg = p.chalky })
-  hi("@property",                   { fg = p.nonPhotoBlue })
-
-  -- Keywords: storage words (const/let/var/class/function/modifiers) →
-  -- indigo italic; word operators (new/typeof/in/instanceof/as/keyof) →
-  -- softPurple. Control-flow keywords inherit the generic softPurple italic.
-  hi("@keyword.typescript",          { fg = p.indigo, italic = true })
-  hi("@keyword.tsx",                 { fg = p.indigo, italic = true })
-  hi("@keyword.type.typescript",     { fg = p.indigo, italic = true })
-  hi("@keyword.type.tsx",            { fg = p.indigo, italic = true })
-  hi("@keyword.function.typescript", { fg = p.indigo, italic = true })
-  hi("@keyword.function.tsx",        { fg = p.indigo, italic = true })
-  hi("@keyword.modifier.typescript", { fg = p.indigo, italic = true })
-  hi("@keyword.modifier.tsx",        { fg = p.indigo, italic = true })
-  hi("@keyword.operator.typescript", { fg = p.softPurple })
-  hi("@keyword.operator.tsx",        { fg = p.softPurple })
-  hi("@keyword.conditional.ternary", { fg = p.pelorous })
-
-  -- Functions / methods / calls → malibu; decorators → pictonBlue.
-  hi("@function.method",            { fg = p.malibu })
-  hi("@function.method.call",       { fg = p.malibu })
-  hi("@function.call",              { fg = p.malibu })
-  hi("@attribute",                  { fg = p.pictonBlue })
-
-  -- JSX: component tags → pink (newColor2), intrinsic tags → mint,
-  -- attributes → deYork italic, delimiters → silverChalice.
-  hi("@tag.tsx",                    { fg = p.newColor2 })
-  hi("@tag.builtin",                { fg = p.mint })
-  hi("@tag.attribute",              { fg = p.deYork, italic = true })
-  hi("@tag.delimiter",              { fg = p.silverChalice })
-
-  -- Misc: SCREAMING_CASE consts → chalky, escapes/entities → indigo,
-  -- link-ish string urls → malibu.
-  hi("@constant",                   { fg = p.chalky })
-  hi("@character.special",          { fg = p.indigo })
-  hi("@string.special.url",         { fg = p.malibu })
-
-  -- ── Terminal colors (from template terminal.ansi*) ────────────
+  -- ── Terminal colors ───────────────────────────────────────────
   vim.g.terminal_color_0  = "#3F4451"
-  vim.g.terminal_color_1  = "#E06C75"
-  vim.g.terminal_color_2  = "#50AF8E"
-  vim.g.terminal_color_3  = "#E5C07B"
-  vim.g.terminal_color_4  = "#61AFEF"
+  vim.g.terminal_color_1  = p.froly
+  vim.g.terminal_color_2  = p.mint
+  vim.g.terminal_color_3  = p.chalky
+  vim.g.terminal_color_4  = p.malibu
   vim.g.terminal_color_5  = "#C162DE"
-  vim.g.terminal_color_6  = "#56B6C2"
+  vim.g.terminal_color_6  = p.fountainBlue
   vim.g.terminal_color_7  = "#E6E6E6"
   vim.g.terminal_color_8  = "#4F5666"
-  vim.g.terminal_color_9  = "#FF616E"
+  vim.g.terminal_color_9  = p.watermelon
   vim.g.terminal_color_10 = "#A5E075"
   vim.g.terminal_color_11 = "#F0A45D"
-  vim.g.terminal_color_12 = "#47BFEE"
+  vim.g.terminal_color_12 = p.pictonBlue
   vim.g.terminal_color_13 = "#DE73FF"
-  vim.g.terminal_color_14 = "#4CD1E0"
+  vim.g.terminal_color_14 = p.turquoise
   vim.g.terminal_color_15 = "#D7DAE0"
 end
 
